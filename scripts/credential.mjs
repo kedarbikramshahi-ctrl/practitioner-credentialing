@@ -41,7 +41,7 @@ export function run({folder,batch,previous=null,out='deliverables',command='prog
     const {state,consumed}=readBatch(folder,batch,prior);
     delete state.integrity;delete state.snapshot;delete state.fingerprint;
     const policy=readJSON('references/policy.json');
-    const codeHash=sha(['scripts/credential.mjs','scripts/transaction.mjs','scripts/engine.mjs','scripts/evidence.mjs','scripts/dates.mjs','scripts/validation.mjs','snapshot.schema.json','references/policy.json','deliverables/rules.md'].map(p=>fs.readFileSync(p)).join('\n'));
+    const codeHash=sha(['scripts/credential.mjs','scripts/transaction.mjs','scripts/engine.mjs','scripts/sources.mjs','scripts/evidence.mjs','scripts/dates.mjs','scripts/validation.mjs','snapshot.schema.json','references/policy.json','references/accepted-sources.json','deliverables/rules.md'].map(p=>fs.readFileSync(p)).join('\n'));
     const fingerprint=sha(json({inputs:state.inputs,predecessor,codeHash}));
     if(fs.existsSync(paths.state) && fs.existsSync(paths.snapshot)) {
       const existing=readJSON(paths.state);

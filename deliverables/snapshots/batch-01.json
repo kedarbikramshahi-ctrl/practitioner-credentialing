@@ -1,6 +1,6 @@
 {
   "schema_version": "credentialing-snapshot/1",
-  "snapshot_id": "4d2d2069-26a5-444f-b51c-940e9b6356ea",
+  "snapshot_id": "3c24570c-0fd4-44eb-b791-5c1e0a8112da",
   "predecessor": null,
   "batch": 1,
   "as_of": "2026-03-16",
@@ -44,10 +44,10 @@
     "deliverables/audit/batch-01.json",
     "deliverables/results/batch-01.json",
     "deliverables/run-log.md",
-    "deliverables/superseded/7034510b-2f8f-46c1-9d94-6a05527fb441/snapshots-batch-01.json",
-    "deliverables/superseded/7034510b-2f8f-46c1-9d94-6a05527fb441/state-batch-01.json",
-    "deliverables/superseded/7034510b-2f8f-46c1-9d94-6a05527fb441/audit-batch-01.json",
-    "deliverables/superseded/7034510b-2f8f-46c1-9d94-6a05527fb441/results-batch-01.json"
+    "deliverables/superseded/08b8858d-8f78-4b37-8d23-e36464834a6a/snapshots-batch-01.json",
+    "deliverables/superseded/08b8858d-8f78-4b37-8d23-e36464834a6a/state-batch-01.json",
+    "deliverables/superseded/08b8858d-8f78-4b37-8d23-e36464834a6a/audit-batch-01.json",
+    "deliverables/superseded/08b8858d-8f78-4b37-8d23-e36464834a6a/results-batch-01.json"
   ],
   "rules_file": "deliverables/rules.md",
   "applications": [
@@ -910,6 +910,11 @@
           "due": null
         },
         {
+          "item": "Reply VR-2000 source is inadmissible: Applicant-carried evidence or a certificate copy cannot replace verification. Medical Services Professional review and admissible verification are required.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
           "item": "Reply VR-2000 does not settle ENT-2000: source, usability window or changed entry requires review; retain the reply and obtain admissible evidence.",
           "owner": "Medical Services Professional",
           "due": null
@@ -1006,6 +1011,11 @@
       "action_queue": [
         {
           "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Reply VR-2201 source is inadmissible: Education sender/office is not the original school/programme or an expressly accepted equivalent source. Medical Services Professional review and admissible verification are required.",
           "owner": "Medical Services Professional",
           "due": null
         },

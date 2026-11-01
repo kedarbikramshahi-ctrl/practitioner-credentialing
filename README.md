@@ -61,6 +61,8 @@ All 124 input files were fetched through connected Google Drive. Their IDs, titl
 
 The policy table in references/policy.json transcribes the privilege rows and authority dates. The parser is designed for these versioned office exports and their structured Markdown headers; unfamiliar formats require MSP review and tested parser changes. CV contents, application signature/date and referee working addresses are not present in exported columns. Their checks are explicitly not assessable and remain queued for office confirmation, rather than being fabricated. Only the six in-scope elements are computed; other credentialing processes remain outside this Skill.
 
+The closed-source identities are transcribed separately in references/accepted-sources.json and enforced by scripts/sources.mjs. Audit entries show each source admission/refusal and its reason. For a secondary education reply, the donor must be the most recent affiliation's MSO, with closure, absence of an equivalent record and its own original verification method recorded. Ambiguous affiliation recency or unsupported provenance remains owned by the MSP. Certification sender identity must match the issuing board or an expressly listed equivalent service; a generic source label or acronym prefix is insufficient. Primary education, CVO retention, secondary employment and licence-source branches apply the same identity discipline.
+
 ## Local capture and handoff
 
 First meaningful implementation commit: `032671cb9c05259054bba039ebd84931dee6c51a`.

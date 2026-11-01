@@ -50,6 +50,23 @@ The procedure identifies quotes adopted from the IHS Medical Staff Credentialing
 
 ## Recorded limitations and conservative routing
 
+### Closed-source identity review (LARK-ATT-2026.1)
+
+The executable identity/alias register is [accepted-sources.json](../references/accepted-sources.json); [sources.mjs](../scripts/sources.mjs) applies it. These are transcriptions and format aliases of the office's source classes, not additional accepted sources. Source classification is recorded separately from reply outcome, usability dates and revision reconciliation.
+
+| Element | Source identity and required evidence | Office authority |
+|---|---|---|
+| Education primary | Medical-school registrar/dean or sponsoring postgraduate institution's GME office/programme director, with sender organization and attester organization both matching the declared institution. A training office cannot attest a school degree just because the organization name matches. | Accepted-source table, Education and training, Primary source |
+| Education equivalent | Exact named service identity from the five published services, with the attester identifying the same service. A source merely beginning with an acronym is not a match. | Same table, Designated equivalent source |
+| Education secondary | Direct medical staff office of the uniquely established most recent employment/affiliation at receipt; explicitly recorded closure of the named school/programme, no available designated equivalent source, and the donor's account of how it obtained its own verification. Existing equivalent-source evidence must not contradict impossibility. An older/unrelated donor or ambiguous current affiliations cannot establish this route automatically. | Same table, Secondary source; procedure section 3, impossibility; office export/history joins |
+| Certification | Credential board name/code must reconcile to the declared issuer/board code. Sender must be that issuer or an exact identity among ABMS certification verification, CertiFACTS, AMA/AOA Physician Profiles, ABPS, ANCC and NCCPA. Those services verify the named credential; they do not replace its issuer field. No secondary route. | Accepted-source table, Board certification, all rows |
+| Employment/affiliation primary | The named institution's MSO, employer HR department or practice's authorized administrator, with consistent sender/attester/employer identity. Personal supervisors and networking profiles are outside the table. | Accepted-source table, Affiliations and employment, Primary/Not accepted |
+| Employment CVO | CVO separately named as sender and attester, with an affirmative recorded retainer relationship to the exact affiliation/employer it acted for. Mentioning an employer in prose does not establish retention. | Same table, Designated equivalent source |
+| Employment secondary | Named employer dissolved, no successor holds records, and the most recent surviving affiliation gives its own verification account. This is a conditional route, not a fallback for unanswered requests. Ambiguous recency/provenance goes to MSP. | Same table, Secondary source |
+| Licensure | WA lookup is the office's direct export of the board's public record. Other-state lookup must name its issuing board or FSMB Physician Data Center and match jurisdiction/number. No secondary source, aggregator, employer copy or applicant-carried substitute. | Accepted-source table, Licensure; export note, Washington columns and joins |
+
+Applicant-carried material and certificate copies remain inadmissible across all branches. Every rejected source is retained with an explicit MSP-owned review/verification task, not relabelled as secondary. The register accepts spelling/case/spacing aliases for the same named service; it does not accept unknown services sharing a prefix. Recency is established from covering/end dates at reply receipt; if multiple distinct affiliations are equally current, the code asks for MSP clarification rather than inventing an institutional tie-break rule. Unrecognized free-text provenance requires clarification; no extra day count or clinical criterion is imposed.
+
 Review corrections apply the existing office rules as follows; they do not introduce new clinical criteria:
 
 - H04/S01: only explicit affirmative permission in the latest authorized Clinical Director disposition ends the hold. Negative, contradictory or unrecognized wording stays held for clarification. The parser records the human's instruction; it does not assess the explanation.

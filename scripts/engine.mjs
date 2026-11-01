@@ -1,4 +1,5 @@
 import {addDays, addYears, cycleEnd, gaps, day} from './dates.mjs';
+import {verificationSource,certificationSource,licenceSource} from './sources.mjs';
 
 const MSO = 'Medical Services Professional', CD = 'Clinical Director';
 const latest = (rows, key) => [...rows].sort((a,b) => a[key].localeCompare(b[key])).at(-1);
@@ -8,22 +9,7 @@ const eduTypes = new Set(['medical-school','residency','fellowship']);
 export function authorized(policy, body, name, role, date) {
   return policy.authority.some(a => a.body === body && a.name === name && a.role === role && a.from <= date && date <= a.to);
 }
-export function admissibleSource(reply, entry) {
-  const source = reply.received_from || '';
-  if (/applicant|photocop|certificate image/i.test(source)) return false;
-  if (reply.element === 'education-and-training') {
-    if (/^(ECFMG|FCVS|Educational Commission for Foreign Medical Graduates|Federation Credentials Verification Service|American Medical Association Physician Profile|American Osteopathic Association Physician Profile|National Student Clearinghouse)\b/i.test(source)) return true;
-    if (/^(Registrar's office|Dean's office|Graduate medical education office|Programme director)/i.test(source)) return reply.attester_organization === entry.organization;
-    // The secondary route requires the closure and the failed equivalent source to be recorded.
-    return /^Medical staff office/i.test(source) && /closed|dissolved/i.test(reply.notes) && /no record|holds no|no successor|not transferred/i.test(reply.notes) && /verif/i.test(reply.notes);
-  }
-  if (reply.element === 'affiliation-and-employment') {
-    if (/^(Medical staff office|Human resources|Authorized administrator|Practice administrator)/i.test(source)) return reply.attester_organization === entry.organization;
-    if (/credentials verification organization/i.test(source)) return (reply.notes || '').includes(entry.organization);
-    return /dissolved/i.test(reply.notes) && /no successor/i.test(reply.notes) && /^Medical staff office/i.test(source);
-  }
-  return false;
-}
+export const admissibleSource=(reply,entry,context={})=>verificationSource(reply,entry,context).admitted;
 
 // Recognize explicit recorded permission, never decide whether evidence merits it.
 // Unknown/contradictory language remains held for human clarification.
@@ -99,7 +85,9 @@ export function evaluate(state, id, asOf, policy, {beforeDecision=false, present
     const changed = older && ['organization','location','role','contact_name','contact_email','from_date','to_date'].some(k=>older[k]!==entry[k]);
     const candidates = rows('verification-replies').filter(r=>r.entry_id===entry.entry_id && visible(r.received_date));
     const required = element==='education' || (entry.to_date || asOf) >= addYears(app.first_received_date,-5) || changed || candidates.some(r=>r.outcome && !r.outcome.startsWith('confirmed'));
-    let accepted = candidates.filter(r=>release && r.received_date >= app.first_received_date && admissibleSource(r,entry));
+    const context={history,replies:rows('verification-replies'),firstReceived:app.first_received_date};
+    const sourceChecks=candidates.map(r=>({reply_id:r.reply_id,...verificationSource(r,entry,context)}));
+    let accepted = candidates.filter(r=>release && r.received_date >= app.first_received_date && sourceChecks.find(check=>check.reply_id===r.reply_id).admitted);
     // A later revision can retain a reply only if the entry's non-date identity is unchanged.
     accepted = accepted.filter(r=> !apps.some(a => a.received_date>r.received_date && +a.revision<=+app.revision && (()=>{
       const older = rows('declared-history').filter(e=>e.entry_id===entry.entry_id && +e.revision<+a.revision).at(-1);
@@ -109,7 +97,8 @@ export function evaluate(state, id, asOf, policy, {beforeDecision=false, present
     const reply = latest(accepted,'received_date');
     const confirmed = reply?.outcome?.startsWith('confirmed');
     const discrepancy = confirmed && (entry.from_date!==reply.verified_from || entry.to_date!==reply.verified_to);
-    details.entries.push({entry_id:entry.entry_id,element,required,reply_id:reply?.reply_id || null,outcome:reply?.outcome || null,declared:{from:entry.from_date,to:entry.to_date,organization:entry.organization},verified:confirmed?{from:reply.verified_from,to:reply.verified_to,organization:reply.attester_organization}:null});
+    details.entries.push({entry_id:entry.entry_id,element,required,reply_id:reply?.reply_id || null,outcome:reply?.outcome || null,source_checks:sourceChecks,declared:{from:entry.from_date,to:entry.to_date,organization:entry.organization},verified:confirmed?{from:reply.verified_from,to:reply.verified_to,organization:reply.attester_organization}:null});
+    for(const check of sourceChecks.filter(c=>!c.admitted))add(`Reply ${check.reply_id} source is inadmissible: ${check.reason}. Medical Services Professional review and admissible verification are required.`);
     for (const r of candidates.filter(r=>!accepted.includes(r))) add(`Reply ${r.reply_id} does not settle ${entry.entry_id}: source, usability window or changed entry requires review; retain the reply and obtain admissible evidence.`);
     if (discrepancy) {
       el[element]='discrepancy';
@@ -163,8 +152,11 @@ export function evaluate(state, id, asOf, policy, {beforeDecision=false, present
   details.licences=[];
   for (const c of licences) {
     const isWA=c.jurisdiction_or_board==='WA';
-    const board = isWA ? waByNumber.find(r=>r.credentialnumber===c.number_declared) : latest(records['licence-lookup-other-states'].filter(r=>r.board_state===c.jurisdiction_or_board && r.licence_number===c.number_declared && r.lookup_date<=asOf),'lookup_date');
-    details.licences.push({declaration_id:c.declaration_id,number:c.number_declared,jurisdiction:c.jurisdiction_or_board,lookup_date:board?.lookup_date||null,status:board?.status||null});
+    const candidates=isWA?[]:records['licence-lookup-other-states'].filter(r=>r.board_state===c.jurisdiction_or_board && r.licence_number===c.number_declared && r.lookup_date<=asOf);
+    const checks=candidates.map(r=>({lookup_date:r.lookup_date,...licenceSource(r,c)}));
+    for(const check of checks.filter(x=>!x.admitted))add(`${c.jurisdiction_or_board} licence ${c.number_declared} has inadmissible source: ${check.reason}. Obtain board/FSMB verification and MSP review.`);
+    const board = isWA ? waByNumber.find(r=>r.credentialnumber===c.number_declared) : latest(candidates.filter(r=>licenceSource(r,c).admitted),'lookup_date');
+    details.licences.push({declaration_id:c.declaration_id,number:c.number_declared,jurisdiction:c.jurisdiction_or_board,lookup_date:board?.lookup_date||null,status:board?.status||null,source_checks:isWA?[{admitted:!!board,kind:board?'primary':null,source:'Washington State Department of Health public lookup exported by the MSO',reason:board?null:'No matching public board lookup'}]:checks});
     if (!board) {licensureComplete=false;el.licensure='outstanding';if(release)add(`Verify ${c.jurisdiction_or_board} licence ${c.number_declared}, including inactive credentials.`);}
     else if (!isWA && !/None reported/i.test(board.disciplinary_action)) {el.licensure='finding';add(`Present action on ${c.number_declared}: ${board.disciplinary_action}.`,CD);}
     else if (isWA && board.actiontaken==='Yes' && board!==wa) {el.licensure='finding';add(`Obtain and present the board's written action on Washington licence ${c.number_declared}; do not infer the action from its indicator.`,CD);}
@@ -178,9 +170,14 @@ export function evaluate(state, id, asOf, policy, {beforeDecision=false, present
   if (findingDisposition) readyDates.push(findingDisposition.date);
 
   const certDeclarations = creds.filter(c=>c.credential_class==='certification');
+  details.certification_sources=[];
   let certs=[];
   for(const c of certDeclarations) {
-    const replies = rows('certification-replies').filter(r=>r.declaration_id===c.declaration_id && visible(r.received_date) && r.received_date>=app.first_received_date && /^(Certifying board|ABMS|CertiFACTS|American Medical Association Physician Profile|American Osteopathic Association Physician Profile|ABPS|ANCC|NCCPA)\b/i.test(r.received_from));
+    const candidates=rows('certification-replies').filter(r=>r.declaration_id===c.declaration_id && visible(r.received_date));
+    const checks=candidates.map(r=>({declaration_id:c.declaration_id,reply_id:r.reply_id,...certificationSource(r,c)}));
+    details.certification_sources.push(...checks);
+    for(const check of checks.filter(x=>!x.admitted))add(`Certification reply ${check.reply_id} source is inadmissible: ${check.reason}. Retain it, obtain admissible verification and raise to the Medical Services Professional.`);
+    const replies = candidates.filter(r=>r.received_date>=app.first_received_date && checks.find(x=>x.reply_id===r.reply_id).admitted);
     const r=latest(replies,'received_date');
     if (!r) {el.certification='outstanding';if(release)add(`Verify all active and inactive certifications, including ${c.declaration_id} (${c.issuer}).`);}
     else {certs.push(r);used.push(r.reply_id);readyDates.push(r.received_date);}

@@ -4,7 +4,7 @@ Reviewed on 2026-11-01. Business clocks remain 2026-03-16, 2026-04-20 and 2026-0
 
 ## Automated checks actually run
 
-`npm.cmd test` passes 23 behavioral tests after the final-review corrections. They exercise date/gap arithmetic, supplied-case transitions, admissibility/activation, source rejection, reference boundaries, roster delegation, partial application errors, state resume, tampered state, missing batches, schema failure and all six review regressions described below. No test edits a supplied input file; runtime test outputs and copied fixture inputs are isolated under a temporary repository directory and cleaned afterward.
+`npm.cmd test` passes 33 behavioral tests after the source-identity corrections. They exercise date/gap arithmetic, supplied-case transitions, admissibility/activation, source rejection, reference boundaries, roster delegation, partial application errors, state resume, tampered state, missing batches, schema failure, the six earlier review regressions and the ten source-table tests described below. No test edits a supplied input file; runtime test outputs and copied fixture inputs are isolated under a temporary repository directory and cleaned afterward.
 
 `npm.cmd run verify` validates all snapshots with the unchanged draft-2020-12 schema and date formats, checks predecessor path/hash and state integrity, verifies every closed input hash, confirms output existence, verifies 40 distinct application files per snapshot, and compares every prior decision object to its later retained occurrence. Batch 3 was invoked with `--previous deliverables/state/batch-02.json` and reads the cumulative evidence it contains.
 
@@ -79,11 +79,34 @@ All three current sealed occurrences are regenerated in order because the implem
 | 2 | f9cc8217-31f9-4cfe-8ff7-7ff3b24b9769 | d74478cbd2cba15bb7595a780e709e69833d0462fe5cb5e02041acc6a7755915 |
 | 3 | e9c5f664-84fe-4e75-9638-57ba9d193c0f | ca3a901eae6a20410c3f153b49d2a6597a8487f3c4ac66d3b0f74248599ea7ad |
 
-The corrected current occurrence IDs are batch 1 `4d2d2069-26a5-444f-b51c-940e9b6356ea`, batch 2 `253d3866-3a5d-4b9c-ba49-088fb000ca58`, and batch 3 `0d12eb9b-ce25-4312-a7f7-d4279298df52`. All three latest attempt results are supported. Direct comparison against the baseline confirms unchanged status, element states, decision admissions/refusals, approval IDs, activation, readiness and monitored conditions for all 40 files in each supplied batch; audit detail and relevant action wording are improved.
+The occurrence IDs sealed by commit 460f494 were batch 1 `4d2d2069-26a5-444f-b51c-940e9b6356ea`, batch 2 `253d3866-3a5d-4b9c-ba49-088fb000ca58`, and batch 3 `0d12eb9b-ce25-4312-a7f7-d4279298df52`. Those runs were supported. Direct comparison against baseline 64e77b9 confirmed unchanged status, element states, decision admissions/refusals, approval IDs, activation, readiness and monitored conditions for all 40 files in each supplied batch; audit detail and relevant action wording were improved. These occurrences are retained as superseded artifacts by the subsequent source-identity correction below.
 
 The independent Git-blob preservation check initially encountered Node's default child-process output-buffer limit on the batch-3 state blob. Repeating the read-only comparison with a 16 MiB maxBuffer passed for all twelve baseline artifacts. This was a diagnostic buffer limit, not a Skill run failure or capture failure. The exact-byte comparisons used git show against baseline commit 64e77b9481f0a599d0de385591ec294d7361966c and Buffer equality, independently of the Skill's archiving code.
 
 The transaction journal protects process interruption and normal write errors. It is not a claim of atomic visibility to arbitrary programs that ignore the journal, nor a hardware power-loss guarantee. The Skill's predecessor reader and verifier check for the journal; simultaneous writers are unsupported and live-owner recovery is refused.
+
+## Closed-source review corrections after commit 460f494
+
+The baseline for this correction is `460f494ffb5769673452c5500c19c30088c984b5`. Its actual checkpoint is `01M6AT7R1EDAYXB82HJG1P67XW`, associated with session `01a19518-9b5f-7691-a44b-d9df9331eb23`. The prior review reproduced an unrelated secondary hospital being accepted and an unrelated credential agency being accepted under a generic certifying-board label. Both are corrected by binding provenance identities, not by adding source categories or clinical rules.
+
+The source module and its identity register were reviewed against every row of LARK-ATT-2026.1. Ten tests in tests/sources.test.mjs cover both blockers and analogous gaps found during that review:
+
+1. The supplied secondary degree letter from Greyfen Regional Hospital remains accepted: it is the applicant's most recent affiliation's MSO; its letter identifies the closed school, explains why primary/equivalent sources are unavailable and states how it verified the degree itself. Recorded FCVS no-record evidence is retained; a contradictory equivalent confirmation would prevent the impossibility route.
+2. A hospital absent from history and an older actual affiliation both fail; education stays outstanding, evidence is retained, and MSP review is queued. Tied current affiliations also require clarification rather than an invented tie-breaker.
+3. Missing or negated closure, missing/contradictory equivalent-source unavailability, a missing verification account, a recruiter substituted for the original source, applicant carriage and an HR office substituted for the required education-secondary MSO all fail.
+4. Certification issuer name, board code, application/declaration and actual sender must agree. The same-code unrelated agency fails and cannot establish privilege support. Direct issuing-board evidence remains accepted.
+5. All seven certification equivalents named in the table are accepted by exact service identity, including full names. Unknown acronym extensions, unrelated organizations following an acronym and services permitted only for other elements fail.
+6. School registrar/dean and postgraduate GME/programme-director branches bind both sender identities to the correct institution and entry kind. Cross-kind offices, unrelated schools and certificate copies fail.
+7. All five education equivalent services work with consistent sender identities, including documented aliases. Unknown services, inconsistent organizations and certification-only equivalents fail.
+8. Employer MSO/HR/authorized-administrator sources remain accepted. Personal supervisors fail. A separately named retained CVO works, but employer-name mentions, negated retention, the wrong employer and inconsistent CVO identity do not.
+9. Secondary employment requires named dissolution, no successor, the recent surviving affiliation and its own verification account. Missing/negated prerequisites and unrelated donors fail.
+10. Licence provenance permits the issuing board and FSMB Physician Data Center; unrelated boards, directories, applicant/employer copies, secondary MSOs, unknown acronym suffixes and jurisdiction/number mismatches fail.
+
+This is a closed-source classification and consistency check on the fictional office's records, not a live authentication service for real-world senders. Free-text provenance outside the supported explicit statements is held for human clarification. There is no invented fixed verification window, attempt threshold, clinical judgment or additional accepted organization.
+
+All twelve baseline snapshot/state/audit/result files from commit 460f494 are preserved byte for byte under deliverables/superseded/<baseline-snapshot-id>/. Earlier retained archives are unchanged. The corrected snapshots form a newly generated 1-to-2-to-3 predecessor chain; the run log identifies each old ID, command, reason and retained archive paths. Each supplied export still computes 40 applications with supported run results. Comparing all three new snapshots against 460f494 confirms unchanged business status, element states, readiness, decision history, approval IDs, activated privileges and monitored conditions; the audit now explains source admissions/refusals and MSP queues make inadmissible-source reasons explicit.
+
+Final source-correction occurrence IDs are batch 1 `3c24570c-0fd4-44eb-b791-5c1e0a8112da`, batch 2 `3fe76069-7c71-4dbb-a35a-ef244f39ec8d`, and batch 3 `6d600797-5de1-4ddf-888b-2fc120d18b21`. Their SHA-256 values are respectively `4c1a232fc388828a81db2d9d8917d9d445ab7d720d3229b0de738d01a9be195f`, `7bfa9f316c22f93e1cef4c8516871560f02e9c7bccf5f4ae039539e5a0a8725a`, and `690b37baf24db079aea179671077c1e48f87b3116ee4811accc584d6f58e6205`. Predecessors match the first two hashes exactly. Intermediate working occurrences were also conservatively archived and their replacement reasons logged before this correction was sealed.
 
 ## Capture and preserved originals
 

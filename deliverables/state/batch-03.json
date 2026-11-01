@@ -26840,8 +26840,8 @@
   "processing_errors": [],
   "snapshot": {
     "path": "deliverables/snapshots/batch-03.json",
-    "sha256": "4082df30f29b7dc2599f258551803c3278c1ae8786f6e783d5787f10bff1a98c"
+    "sha256": "690b37baf24db079aea179671077c1e48f87b3116ee4811accc584d6f58e6205"
   },
-  "fingerprint": "43a5592fc325a9763ff15ab0e4422b700a1cd6a5f403004211dfbd3a97f35a0c",
-  "integrity": "1df9a90f024d84cde751fee82347babedef5be62bbc6070bcabf3c6fa9bc6796"
+  "fingerprint": "2aefaba5d23b3a3ef4068119b369a3ec17ec39af0e216a96bea6743676f48e88",
+  "integrity": "17b446e458c9a4eb22b5a2440820299e085f80ff6a8d50db8aae65846682d346"
 }

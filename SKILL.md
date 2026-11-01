@@ -9,6 +9,8 @@ Run `node scripts/credential.mjs --batch <folder> --number <N>`, adding `--previ
 
 The state file retains earlier evidence, revisions, attempts, documents and first receipt anchors. A later run consumes that state and validates its associated snapshot hash before adding a closed export. Do not start batch 3 from scratch or reconstruct state from the latest CSVs alone.
 
+Use the closed source classes in references/attester-table.md and their executable identity register references/accepted-sources.json. Source admission is implemented in scripts/sources.mjs and exposed with reasons in the audit. Do not accept a generic office/board label, an acronym prefix, an unrelated secondary donor, or a CVO merely naming an employer. If provenance or most-recent-affiliation identity is ambiguous, retain the evidence and obtain MSP clarification.
+
 Inspect the resulting snapshot and per-application audit. The snapshot conforms to the unmodified schema and contains statuses, all decisions including refusals, exact approved privileges, conditions and human-owned action queues. The audit exposes source choices, declared/verified dates, gaps and reference exclusions. Outstanding evidence is a valid business result, not permission to infer a pass.
 
 Five judgments stay human: satisfactory gap explanations, disqualifying findings, discontinuation on eligibility, committee recommendations and privilege selection, and GB outcomes. Present the evidence to the authority named in the roster; record the actual returning document. A document's assertion of authority does not establish authority. Do not send any correspondence or create clinical decisions from a queue item.

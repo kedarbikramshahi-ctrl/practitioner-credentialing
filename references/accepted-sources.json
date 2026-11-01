@@ -1,0 +1,27 @@
+{
+  "version": "LARK-ATT-2026.1",
+  "source": "attester-table.md",
+  "education_equivalents": [
+    {"name":"Educational Commission for Foreign Medical Graduates","aliases":["ECFMG","Educational Commission for Foreign Medical Graduates (ECFMG)"]},
+    {"name":"Federation Credentials Verification Service","aliases":["FCVS","Federation Credentials Verification Service of the Federation of State Medical Boards"]},
+    {"name":"American Medical Association Physician Profile","aliases":["AMA Physician Profile"]},
+    {"name":"American Osteopathic Association Physician Profile","aliases":["AOA Physician Profile"]},
+    {"name":"National Student Clearinghouse","aliases":[]}
+  ],
+  "certification_equivalents": [
+    {"name":"American Board of Medical Specialties certification verification","aliases":["ABMS","ABMS certification verification","American Board of Medical Specialties","American Board of Medical Specialties (ABMS) certification verification"]},
+    {"name":"CertiFACTS","aliases":[]},
+    {"name":"American Medical Association Physician Profile","aliases":["AMA Physician Profile"]},
+    {"name":"American Osteopathic Association Physician Profile","aliases":["AOA Physician Profile"]},
+    {"name":"American Board of Physician Specialties","aliases":["ABPS","American Board of Physician Specialties (ABPS)"]},
+    {"name":"American Nurses Credentialing Center","aliases":["ANCC","American Nurses Credentialing Center (ANCC)"]},
+    {"name":"National Commission on Certification of Physician Assistants","aliases":["NCCPA","National Commission on Certification of Physician Assistants (NCCPA)"]}
+  ],
+  "licence_equivalents": [
+    {"name":"Federation of State Medical Boards Physician Data Center","aliases":["FSMB Physician Data Center"]}
+  ],
+  "medical_school_roles":["Registrar's office","Dean's office"],
+  "postgraduate_roles":["Graduate medical education office","Programme director","Program director"],
+  "employment_roles":["Medical staff office","Human resources department","Human resources","Practice's authorized administrator","Practice authorized administrator","Authorized administrator","Practice administrator"],
+  "cvo_role":"Credentials verification organization"
+}

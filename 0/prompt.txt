@@ -1,0 +1,49 @@
+Read README.md and tell me the project title. Do not modify any files.
+
+---
+
+Report your CODEX_SESSION_ID and CODEX_THREAD_ID, then run entire session current. Do not modify files.
+
+---
+
+`entire session current` is a terminal command that asks Entire which session it is capturing.
+
+In **that same Codex window**, send:
+
+> Run `entire session current` in the project terminal and show the output. Do not modify files.
+
+Your two environment IDs already match the tracked session `01a19518-9b5f-7691-a44b-d9df9331eb23`. If the command confirms that same ID without a missing-state warning, you can continue the assignment in that window.
+
+---
+
+Verify Entire checkpoint creation after the first meaningful commit. Stop and report any capture failure. Preserve the original interview and schema unchanged. Do not push without my approval.
+
+---
+
+Keep implementation paused. Run read-only entire doctor and entire session current outside the sandbox, requesting permission if needed. Check lifecycle logs for session 01a19518-9b5f-7691-a44b-d9df9331eb23. Distinguish sandbox errors from actual capture failure. Do not modify files, attach sessions, create commits, or push.
+
+---
+
+Continue Project E implementation using the previously approved plan. If that plan is unavailable in this session, tell me before replacing it.
+
+Read README.md, the full assignment, interviews/INTERVIEW.md, snapshot.schema.json, all three batch folders, and the supporting business documents.
+
+Build the reusable Practitioner Credentialing Agent Skill with stateful processing, human decision queues, schema validation, tests, and all required deliverables.
+
+Preserve the original interview and schema unchanged. After the first meaningful implementation commit, verify that Entire created a local checkpoint associated with that commit and this session. Stop and report any actual capture failure; distinguish sandbox restrictions from capture failures using diagnostics outside the sandbox.
+
+Do not push anything to GitHub without my approval.
+
+---
+
+I authorize you to create a replacement plan. Read all three batches and supporting documents, save the plan, and proceed with implementation, tests, and required deliverables.
+
+Preserve the original interview and schema unchanged. Verify Entire checkpoint creation after the first meaningful commit. Stop and report any actual capture failure. Do not push without my approval.
+
+---
+
+Show the exact command you want to retry outside the sandbox and explain what it changes before requesting approval again.
+
+---
+
+Check whether the interrupted install completed and whether dependencies are still missing. If installation is needed, run npm.cmd install --ignore-scripts --no-audit --no-fund. Request approval for an outside-sandbox retry only if necessary. Preserve the interview and schema; do not push.

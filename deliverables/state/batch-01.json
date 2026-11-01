@@ -21131,9 +21131,9 @@
   "as_of": "2026-03-16",
   "snapshot": {
     "path": "deliverables/snapshots/batch-01.json",
-    "sha256": "41c7add1d02830c638aff1b3d67610b8945554d02c96189561916ae9b5a6b96e"
+    "sha256": "d36abc07b7dc850fed1a0c80cc550c56f0ec49556a27083c92497110f6968f7a"
   },
-  "fingerprint": "332a4d66ee29dce998aaf853265581c3df3587a54cdf7922f4d9d65db117b6a0",
+  "fingerprint": "0614c46ac1c93b7a7b57448b6b19bc20e35e1ddab50ec15e549df00e6366410f",
   "processing_errors": [],
-  "integrity": "569a10c7b22293a6ac45ed03ed2f09656c14a60511fe06b1928017365225b570"
+  "integrity": "559368ef447fc951b7b4f683355a807d60c87c533387beaebe5f174789fc7470"
 }

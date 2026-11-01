@@ -39,7 +39,13 @@ Open the latest snapshot's action_queue alongside its audit entry and original r
 
 Each snapshot links its predecessor by path and SHA-256; the state links the snapshot and carries its own integrity hash. `npm run verify` checks schema, chain, all retained input hashes, output existence and decision-history preservation. The original schema is used by Ajv 2020 plus date-format validation. Tests cover supplied cases, boundaries, malformed application scope, missing batches, tampered state and unchanged reruns.
 
+Publication uses an undo journal at `<out>/.transaction.json`, covering archives, snapshot, state, audit, attempt result and run log together. On a write error it restores prior bytes before publishing a blocked result/log. After an abrupt process exit, the next batch invocation recovers the interrupted attempt before reading state and records recovery. Verification refuses any pending journal. Do not read or remove the journal by hand; do not run two writers against the same output directory. This provides process-interruption recovery, not a hardware power-loss guarantee.
+
+The one-year appointment cycle includes its last day. A past cycle does not renew itself. Reappointment is outside the initial-appointment procedure and the supplied schema has no expired-cycle status, so a post-cycle application is a partial result with an explicit MSP task, an inactive historical approval, and `in-verification` disclosed as an unresolved-processing placeholder. An expired/non-active practice licence within the cycle reopens licensure, removes the active assertion and queues recorded clinical review; no denial or discontinuation is invented. A future expiry inside the cycle remains monitored and does not prevent activation while the licence is valid.
+
 A Git commit seals a snapshot. Identical reruns retain its snapshot_id and bytes while recording the attempted run. Changed reruns preserve earlier snapshot/state/audit/result bytes under deliverables/superseded/<old-id>/, create new IDs at the standard paths and record the supersession. Rerun the changed batch and every successor in order; run verification before committing the corrected chain. Do not hand off a chain with a stale predecessor hash. The runtime archives changed working occurrences too, conservatively preserving evidence even before they are sealed.
+
+Use `--reason "description of correction"` on a changed rerun to record why it supersedes the sealed occurrence. Archives are never overwritten with differing bytes. The standard snapshot paths always identify the current chain.
 
 ## Source documents and limits
 

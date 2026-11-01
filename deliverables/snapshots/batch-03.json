@@ -1,9 +1,9 @@
 {
   "schema_version": "credentialing-snapshot/1",
-  "snapshot_id": "e9c5f664-84fe-4e75-9638-57ba9d193c0f",
+  "snapshot_id": "0d12eb9b-ce25-4312-a7f7-d4279298df52",
   "predecessor": {
     "path": "deliverables/snapshots/batch-02.json",
-    "sha256": "d74478cbd2cba15bb7595a780e709e69833d0462fe5cb5e02041acc6a7755915"
+    "sha256": "20896f79fae6504053a49d99abfa74337bdf4b03b0cb4bd6b43d9b786cdd0df1"
   },
   "batch": 3,
   "as_of": "2026-05-18",
@@ -58,10 +58,10 @@
     "deliverables/audit/batch-03.json",
     "deliverables/results/batch-03.json",
     "deliverables/run-log.md",
-    "deliverables/superseded/6361a097-36e2-457e-b4dc-3c355de3f3c9/snapshots-batch-03.json",
-    "deliverables/superseded/6361a097-36e2-457e-b4dc-3c355de3f3c9/state-batch-03.json",
-    "deliverables/superseded/6361a097-36e2-457e-b4dc-3c355de3f3c9/audit-batch-03.json",
-    "deliverables/superseded/6361a097-36e2-457e-b4dc-3c355de3f3c9/results-batch-03.json"
+    "deliverables/superseded/e9c5f664-84fe-4e75-9638-57ba9d193c0f/snapshots-batch-03.json",
+    "deliverables/superseded/e9c5f664-84fe-4e75-9638-57ba9d193c0f/state-batch-03.json",
+    "deliverables/superseded/e9c5f664-84fe-4e75-9638-57ba9d193c0f/audit-batch-03.json",
+    "deliverables/superseded/e9c5f664-84fe-4e75-9638-57ba9d193c0f/results-batch-03.json"
   ],
   "rules_file": "deliverables/rules.md",
   "applications": [
@@ -1067,11 +1067,6 @@
           "due": null
         },
         {
-          "item": "Reply VR-2104 does not settle ENT-2100: source, usability window or changed entry requires review; retain the reply and obtain admissible evidence.",
-          "owner": "Medical Services Professional",
-          "due": null
-        },
-        {
           "item": "Retain documented impossibility and secondary verification VR-2100: Cascade Valley College of Medicine closed on 2019-06-30 and its registrar's records were not transferred to a successor institution. The Federation Credentials Verification Service holds no record. This office verified the Doctor of Medicine degree directly with the college's registrar on 2005-08-12, before the closure, and holds that verification on file. This letter is a secondary source and is offered because the primary and the designated equivalent sources are both impossible.",
           "owner": "Medical Services Professional",
           "due": null
@@ -1117,7 +1112,7 @@
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-2201 (Westmarch University Medical Center); 4 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-2201 (Westmarch University Medical Center); 4 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         },
@@ -1202,7 +1197,7 @@
           "due": null
         },
         {
-          "item": "Reference REF-2401 does not count: relative, spouse or partner; obtain a qualifying current reference.",
+          "item": "Reference REF-2401 does not count: relative, spouse or partner box is Yes or unanswered; obtain a qualifying current reference.",
           "owner": "Applicant",
           "due": null
         },
@@ -1552,7 +1547,7 @@
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-3303 (Willowmere Health Cooperative); 3 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-3303 (Willowmere Health Cooperative); 3 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         },

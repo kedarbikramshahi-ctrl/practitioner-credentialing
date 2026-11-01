@@ -50,6 +50,17 @@ The procedure identifies quotes adopted from the IHS Medical Staff Credentialing
 
 ## Recorded limitations and conservative routing
 
+Review corrections apply the existing office rules as follows; they do not introduce new clinical criteria:
+
+- H04/S01: only explicit affirmative permission in the latest authorized Clinical Director disposition ends the hold. Negative, contradictory or unrecognized wording stays held for clarification. The parser records the human's instruction; it does not assess the explanation.
+- L01: match each declared Washington licence number to its own identity-matched board record, including inactive licences. One current practice licence does not settle another declaration. Missing verification still holds readiness even when another licence carries a disposed finding.
+- V05/P02: source admissibility is separate from reply outcome. A later usable reply reporting no record or another non-confirming outcome reopens its entry, retaining earlier confirmations as history. A still later confirming reply can resolve it.
+- L03/A01: cycle end is inclusive. The historical approval does not establish active privileges after cycle end, or from an expired/non-active practice licence. Expiry reopens licensure and routes the evidence; this is not an inferred denial or discontinuation. A future expiry inside an otherwise valid cycle remains a monitored condition and does not block activation before expiry.
+- R01: the relationship checkbox is read with the narrative. Explicitly denying a prohibited relationship does not assert that relationship. A contradiction or unresolved relationship wording needs clarification and is not counted while unresolved.
+- S02: publish current outputs, superseded bytes and the run-log entry as a recoverable transaction. A pending journal blocks verification and predecessor reads. Recover an interrupted process before reading state; retain old computed artifacts and record a blocked attempt on failure.
+
+The procedure's opening scope excludes reappointment. The supplied schema has no expired-cycle status. For a post-cycle file the engine retains its admitted approval with active_at_export false, reports the application as partial, and uses in-verification only as an explicitly disclosed unresolved-processing placeholder. The MSP must take up reappointment under the separate office procedure; no renewal, clinical denial or new business enumeration is inferred.
+
 The supplied export does not expose CV content or application signature/attestation columns. The engine does not claim to inspect those documents; it explicitly queues the office check. Free-text dispositions use the supplied structured headers and explicit “present/proceed/discontinue” language. A new document format must be reviewed and its parser extended with tests before relying on it. The secondary-route parser requires recorded closure and missing equivalent evidence; MSP review remains on the queue. No new business threshold was inferred.
 
 The runtime never sends letters, requests, alerts, or approvals; queue wording records what humans must do. The only recorded decisions are the office documents actually consumed. Policy tables in policy.json transcribe standing criteria and the roster; they contain no application IDs or expected answers.

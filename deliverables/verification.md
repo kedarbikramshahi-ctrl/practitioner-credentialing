@@ -4,7 +4,7 @@ Reviewed on 2026-11-01. Business clocks remain 2026-03-16, 2026-04-20 and 2026-0
 
 ## Automated checks actually run
 
-`npm.cmd test` passes 14 behavioral tests. They exercise date/gap arithmetic, supplied-case transitions, admissibility/activation, source rejection, reference boundaries, roster delegation, partial application errors, state resume, tampered state, missing batches and schema failure. No test edits a supplied input file; runtime test outputs are isolated under a temporary repository directory and cleaned afterward.
+`npm.cmd test` passes 23 behavioral tests after the final-review corrections. They exercise date/gap arithmetic, supplied-case transitions, admissibility/activation, source rejection, reference boundaries, roster delegation, partial application errors, state resume, tampered state, missing batches, schema failure and all six review regressions described below. No test edits a supplied input file; runtime test outputs and copied fixture inputs are isolated under a temporary repository directory and cleaned afterward.
 
 `npm.cmd run verify` validates all snapshots with the unchanged draft-2020-12 schema and date formats, checks predecessor path/hash and state integrity, verifies every closed input hash, confirms output existence, verifies 40 distinct application files per snapshot, and compares every prior decision object to its later retained occurrence. Batch 3 was invoked with `--previous deliverables/state/batch-02.json` and reads the cumulative evidence it contains.
 
@@ -55,6 +55,35 @@ The interrupted input import was completed and its resumed documents rewritten w
 19 active; 2 active-with-conditions; 3 approved-not-yet-effective; 7 packet-presentable; 3 in-verification; one each decision-inadmissible, ineligible-clock-expired, withdrawn, discontinued, deferred and denied. Total 40. Final counts were independently grouped in PowerShell from the output JSON.
 
 Supported is a run state, not a statement that all practitioners are approved. Human actions remain in each file's queue. Application signatures, CV reconciliation content and referee working addresses are not in the export and must be checked in the office file; this limitation is visible in audit/queues. Structured-header parsing covers the supplied forms and explicit recorded dispositions; new formats require review and tests. No clinical judgment was inferred, no correspondence was sent, and no push was performed.
+
+## Corrections following read-only final review
+
+The reviewed baseline is commit `64e77b9481f0a599d0de385591ec294d7361966c`. All five reproduced correctness issues and the transaction-consistency issue were addressed. Regression fixtures change only in-memory evidence or temporary copies, never the original exports, interview or schema.
+
+| Reproduced issue | Correction and office authority | Regression evidence |
+|---|---|---|
+| Negative CD disposition released hold | Recognize only explicit affirmative permission in the latest authorized disposition. Negative, conflicting and unknown language retains the hold for clarification. Procedure sections 6, 8 and 11 reserve the judgment to CD. | Negative and ambiguous dispositions tested for gap and high-risk/licensure files; a later negative overrides an earlier affirmative. Explicit supplied permission still releases the hold. |
+| Additional WA licence unverified | Each WA declaration now matches its own credential number and board lookup. Missing one holds readiness even when another practice licence is current. Procedure section 3/check 1 requires every active/inactive licence verified. | An unverified second WA licence holds the file; direct evidence of that inactive licence resolves it while the active licence continues to meet practice-state requirements. |
+| New negative reply ignored | Separate admissible sender from confirming outcome; use the latest usable source reply. Section 11 requires re-entry on new evidence, while section 8 requires no outstanding work. | Later no-record replies reopen employment and education individually, retain original confirmation history and leave unrelated elements alone; subsequent confirmation resolves the affected element. |
+| Cycle end / expired licence still active | Enforce inclusive cycle end and current practice-licence dates. Retain admitted approval rather than invent denial/discontinuation. Procedure section 3/check 1, sections 10 and 11 govern the cycle, Washington bylaw and expiry re-entry. | Last cycle day and licence expiry day are valid; the following day is inactive. Expired licence reopens verification and queues CD review. Out-of-cycle scope is partial with explicit reappointment ownership, not an inferred renewal. |
+| Explicitly unrelated peer rejected | Remove explicit narrative denials before checking a No checkbox for contradictions; ambiguous/contradictory relationship text is not counted pending clarification. Procedure section 3/check 4 and reference form part 2 require all three eligibility conditions. | Negative coordinated lists count; positive family/partner statements alongside No require clarification; a Yes checkbox cannot be overridden by a negative narrative. |
+| Late output failure left inconsistent files | Durable undo journal covers archives/current outputs/result/run log. Failure rolls back old bytes before recording blocked result; readers refuse an interrupted publication until recovery. Assignment failure-state and immutable-occurrence requirements govern this implementation mechanism. | Injected EIO after state, snapshot, result and log replacement restores prior snapshot/state/audit exactly and removes unpublished archives. First-ever failure creates no computed artifacts. A child process exits after replacing the result; next run restores old bytes before archiving, logs the interrupted attempt as blocked, then publishes a consistent successful occurrence. |
+
+The office procedure explicitly excludes reappointment, and the original schema has no expired-cycle status. Consequently that out-of-scope application retains its historical approval/privilege list with active_at_export false, is reported partial at run level, and uses in-verification only as a disclosed unresolved-processing placeholder. This encoding limitation and the MSP's reappointment task are explicit in the queue and README; no business rule or schema enumeration was added.
+
+All three current sealed occurrences are regenerated in order because the implementation and applied-rule register changed. The run log records the exact command, old snapshot ID, correction reason and archive paths for each replacement. The baseline snapshot/state/audit/result bytes are retained under each old snapshot ID and compared directly against Git's baseline blobs during verification. Current source exports and all previously refused decisions remain unchanged. The latest supplied-batch business statuses are compared with the baseline rather than assumed from test success.
+
+| Baseline batch | Sealed snapshot ID | SHA-256 of preserved original bytes |
+|---|---|---|
+| 1 | 7034510b-2f8f-46c1-9d94-6a05527fb441 | 41c7add1d02830c638aff1b3d67610b8945554d02c96189561916ae9b5a6b96e |
+| 2 | f9cc8217-31f9-4cfe-8ff7-7ff3b24b9769 | d74478cbd2cba15bb7595a780e709e69833d0462fe5cb5e02041acc6a7755915 |
+| 3 | e9c5f664-84fe-4e75-9638-57ba9d193c0f | ca3a901eae6a20410c3f153b49d2a6597a8487f3c4ac66d3b0f74248599ea7ad |
+
+The corrected current occurrence IDs are batch 1 `4d2d2069-26a5-444f-b51c-940e9b6356ea`, batch 2 `253d3866-3a5d-4b9c-ba49-088fb000ca58`, and batch 3 `0d12eb9b-ce25-4312-a7f7-d4279298df52`. All three latest attempt results are supported. Direct comparison against the baseline confirms unchanged status, element states, decision admissions/refusals, approval IDs, activation, readiness and monitored conditions for all 40 files in each supplied batch; audit detail and relevant action wording are improved.
+
+The independent Git-blob preservation check initially encountered Node's default child-process output-buffer limit on the batch-3 state blob. Repeating the read-only comparison with a 16 MiB maxBuffer passed for all twelve baseline artifacts. This was a diagnostic buffer limit, not a Skill run failure or capture failure. The exact-byte comparisons used git show against baseline commit 64e77b9481f0a599d0de385591ec294d7361966c and Buffer equality, independently of the Skill's archiving code.
+
+The transaction journal protects process interruption and normal write errors. It is not a claim of atomic visibility to arbitrary programs that ignore the journal, nor a hardware power-loss guarantee. The Skill's predecessor reader and verifier check for the journal; simultaneous writers are unsupported and live-owner recovery is refused.
 
 ## Capture and preserved originals
 

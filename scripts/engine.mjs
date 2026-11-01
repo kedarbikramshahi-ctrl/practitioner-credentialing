@@ -11,7 +11,6 @@ export function authorized(policy, body, name, role, date) {
 export function admissibleSource(reply, entry) {
   const source = reply.received_from || '';
   if (/applicant|photocop|certificate image/i.test(source)) return false;
-  if (reply.outcome && !reply.outcome.startsWith('confirmed')) return false;
   if (reply.element === 'education-and-training') {
     if (/^(ECFMG|FCVS|Educational Commission for Foreign Medical Graduates|Federation Credentials Verification Service|American Medical Association Physician Profile|American Osteopathic Association Physician Profile|National Student Clearinghouse)\b/i.test(source)) return true;
     if (/^(Registrar's office|Dean's office|Graduate medical education office|Programme director)/i.test(source)) return reply.attester_organization === entry.organization;
@@ -25,9 +24,28 @@ export function admissibleSource(reply, entry) {
   }
   return false;
 }
+
+// Recognize explicit recorded permission, never decide whether evidence merits it.
+// Unknown/contradictory language remains held for human clarification.
+export function dispositionPermission(doc) {
+  const body = doc.text.split(/\r?\n/).filter(l=>!l.startsWith('#') && !l.startsWith('**')).join(' ');
+  if (/\b(?:do not|must not|cannot|can't|never|not permitted to|not authorized to)\s+(?:\w+\s+){0,4}(?:proceed|present)\b/i.test(body) || /\b(?:unsatisfactory|insufficient|unacceptable|not satisfactory|not sufficient|not acceptable)\b/i.test(body)) return 'hold';
+  if (/(?:^|[.!?]\s+)(?:The explanation is sufficient and )?the file may proceed(?:[.!?]|$)/i.test(body.trim()) || /(?:^|[.!?]\s+)Present the file to the Executive Committee of the Medical Staff and (?:to )?the Governing Body\b/i.test(body.trim())) return 'release';
+  return 'unclear';
+}
+
+function relationshipConflict(text) {
+  if (/\bnot\s+(?:not|neither|unrelated)\b/i.test(text)) return true;
+  // Remove explicit denials as a whole, including coordinated lists. Do not
+  // remove a positive relationship mentioned elsewhere in the same answer.
+  const word='(?:relatives?|spouses?|partners?|related)';
+  const denied=new RegExp('\\b(?:not|neither|no)\\s+(?:a\\s+|an\\s+|the\\s+|my\\s+)?'+word+'(?:(?:\\s*,\\s*|\\s+(?:or|nor|and)\\s+)(?:a\\s+|an\\s+|the\\s+)?'+word+')*','gi');
+  return /\b(?:relative|relatives|spouse|spouses|partner|partners|related|husband|wife|sibling|brother|sister|cousin)\b/i.test(text.replace(denied,''));
+}
 export function qualifyingReference(reply, app, presentation) {
   if (!reply.signature_date || reply.signature_date < app.first_received_date || reply.signature_date > presentation) return {ok:false,reason:'signature outside verification window'};
-  if (reply.related_or_partner !== 'No' || /\b(spouse|partner|relative|related by marriage)\b/i.test(reply.relationship_stated)) return {ok:false,reason:'relative, spouse or partner'};
+  if (reply.related_or_partner !== 'No') return {ok:false,reason:'relative, spouse or partner box is Yes or unanswered'};
+  if (relationshipConflict(reply.relationship_stated || '')) return {ok:false,reason:'relationship narrative conflicts with or does not clearly support the No box; obtain clarification'};
   if (reply.referee_specialty_stated !== app.discipline) return {ok:false,reason:'different clinical discipline'};
   if (reply.last_worked_together_end && reply.last_worked_together_end < addYears(reply.signature_date,-2)) return {ok:false,reason:'no direct work within two years of signature'};
   if (presentation > addYears(reply.signature_date,2)) return {ok:false,reason:`signature stale after ${addYears(reply.signature_date,2)}`};
@@ -79,8 +97,8 @@ export function evaluate(state, id, asOf, policy, {beforeDecision=false, present
     if (element==='experience' && (!entry.contact_name || !entry.contact_email)) missing.push(`verification contact on ${entry.entry_id}`);
     const older = rows('declared-history').filter(e=>e.entry_id===entry.entry_id && +e.revision<+app.revision).at(-1);
     const changed = older && ['organization','location','role','contact_name','contact_email','from_date','to_date'].some(k=>older[k]!==entry[k]);
-    const required = element==='education' || (entry.to_date || asOf) >= addYears(app.first_received_date,-5) || changed;
     const candidates = rows('verification-replies').filter(r=>r.entry_id===entry.entry_id && visible(r.received_date));
+    const required = element==='education' || (entry.to_date || asOf) >= addYears(app.first_received_date,-5) || changed || candidates.some(r=>r.outcome && !r.outcome.startsWith('confirmed'));
     let accepted = candidates.filter(r=>release && r.received_date >= app.first_received_date && admissibleSource(r,entry));
     // A later revision can retain a reply only if the entry's non-date identity is unchanged.
     accepted = accepted.filter(r=> !apps.some(a => a.received_date>r.received_date && +a.revision<=+app.revision && (()=>{
@@ -89,22 +107,23 @@ export function evaluate(state, id, asOf, policy, {beforeDecision=false, present
       return older && newer && ['organization','location','role','contact_name','contact_email'].some(k=>older[k]!==newer[k]);
     })()));
     const reply = latest(accepted,'received_date');
-    const discrepancy = reply && (entry.from_date!==reply.verified_from || entry.to_date!==reply.verified_to);
-    details.entries.push({entry_id:entry.entry_id,element,required,reply_id:reply?.reply_id || null,declared:{from:entry.from_date,to:entry.to_date,organization:entry.organization},verified:reply?{from:reply.verified_from,to:reply.verified_to,organization:reply.attester_organization}:null});
+    const confirmed = reply?.outcome?.startsWith('confirmed');
+    const discrepancy = confirmed && (entry.from_date!==reply.verified_from || entry.to_date!==reply.verified_to);
+    details.entries.push({entry_id:entry.entry_id,element,required,reply_id:reply?.reply_id || null,outcome:reply?.outcome || null,declared:{from:entry.from_date,to:entry.to_date,organization:entry.organization},verified:confirmed?{from:reply.verified_from,to:reply.verified_to,organization:reply.attester_organization}:null});
     for (const r of candidates.filter(r=>!accepted.includes(r))) add(`Reply ${r.reply_id} does not settle ${entry.entry_id}: source, usability window or changed entry requires review; retain the reply and obtain admissible evidence.`);
     if (discrepancy) {
       el[element]='discrepancy';
       add(`Resolve ${entry.entry_id} in writing or amend: declared ${entry.from_date} to ${entry.to_date||'current'}; ${reply.reply_id} reports ${reply.verified_from} to ${reply.verified_to||'current'}.`,'Applicant');
-    } else if (required && !reply) {
+    } else if (required && !confirmed) {
       if (el[element]!=='discrepancy') el[element]='outstanding';
-      if (release) add(`Obtain direct admissible verification for ${entry.entry_id} (${entry.organization}); ${attempts.filter(a=>a.subject_ref===entry.entry_id).length} attempts retained.`);
-    } else if (reply) {
+      if (release) add(`Obtain direct admissible confirmation for ${entry.entry_id} (${entry.organization}); ${reply?`latest reply ${reply.reply_id} reports ${reply.outcome || 'no confirming outcome'}; earlier confirmations do not settle it; `:''}${attempts.filter(a=>a.subject_ref===entry.entry_id).length} attempts retained.`);
+    } else if (confirmed) {
       used.push(reply.reply_id); readyDates.push(reply.received_date);
       if (element==='education') verifiedTraining.push({...entry,reply});
       if (/secondary source/i.test(reply.notes)) add(`Retain documented impossibility and secondary verification ${reply.reply_id}: ${reply.notes}`);
     }
     const tries = attempts.filter(a=>a.subject_ref===entry.entry_id);
-    if (tries.length>=3) add(`${entry.entry_id}: ${tries.length} verification attempts retained${reply?'; eventual reply does not erase non-response history':'; non-response is a red flag and remains outstanding'}.`);
+    if (tries.length>=3) add(`${entry.entry_id}: ${tries.length} verification attempts retained${confirmed?'; eventual reply does not erase non-response history':'; non-response is a red flag and remains outstanding'}.`);
   }
   if (school?.to_date) {
     details.gaps = gaps(history,school.to_date,asOf).map(g=>{
@@ -115,7 +134,9 @@ export function evaluate(state, id, asOf, policy, {beforeDecision=false, present
     });
   }
   const dispositions = docs.filter(d=>d.document_path.startsWith('dispositions/') && policy.authority.some(a=>a.body===CD && a.from<=d.date && d.date<=a.to && d.fields['recorded by']===`${a.name}, ${a.role}`));
-  const gapDisposition = dispositions.find(d=>/gap/i.test(d.text.split('\n')[0]) && /proceed|present/i.test(d.text));
+  const gapRecord = latest(dispositions.filter(d=>/gap/i.test(d.text.split('\n')[0])),'date');
+  const gapDisposition = gapRecord && dispositionPermission(gapRecord)==='release' ? gapRecord : null;
+  if (gapRecord && !gapDisposition) add(`Retain Clinical Director disposition ${gapRecord.letter_id}: ${dispositionPermission(gapRecord)}; no permission to advance is established. Obtain an explicit recorded disposition before presentation.`,CD);
   if (details.gaps.some(g=>g.days>=180) && !gapDisposition) {
     if (el.gaps!=='return-incomplete') el.gaps='routed-to-clinical-director';
     add(`Record a disposition on long gaps: ${details.gaps.filter(g=>g.days>=180).map(g=>`${g.from} to ${g.to} (${g.days} days)`).join('; ')}.`,CD);
@@ -124,19 +145,29 @@ export function evaluate(state, id, asOf, policy, {beforeDecision=false, present
   for(const d of docs.filter(d=>d.document_path.startsWith('dispositions/') && !dispositions.includes(d))) add(`Disposition ${d.letter_id} is not supported by the authority roster; obtain an authorized disposition.`);
   const creds = rev('declared-credentials');
   const licences = creds.filter(c=>c.credential_class==='licence');
-  const wa = latest(records['licence-lookup-wa'].filter(r=>r.lastname===app.last_name && r.firstname===app.first_name && r.middlename===app.middle_name && r.birthyear===app.birth_year && r.lookup_date<=asOf),'lookup_date');
+  const waRows = records['licence-lookup-wa'].filter(r=>r.lastname===app.last_name && r.firstname===app.first_name && r.middlename===app.middle_name && r.birthyear===app.birth_year && r.lookup_date<=asOf);
+  const waByNumber = [...new Map([...waRows].sort((a,b)=>a.lookup_date.localeCompare(b.lookup_date)).map(r=>[r.credentialnumber,r])).values()];
+  const wa = latest(waByNumber.filter(r=>norm(r.status)==='active' && r.expirationdate>=asOf),'lookup_date') || latest(waByNumber,'lookup_date');
+  const practiceLicenceCurrent = !!wa && norm(wa.status)==='active' && !!wa.expirationdate && wa.expirationdate>=asOf;
+  let licensureComplete = !!release && practiceLicenceCurrent;
   const restricted = wa && /probation|supervis|monitor|restrict|suspend|stipulat|surrender/i.test([wa.status,...docs.filter(d=>/board-action/.test(d.document_path)).map(d=>d.text)].join(' '));
   const highRisk = disclosures.some(r=>r.answer==='Yes') || restricted || wa?.actiontaken==='Yes';
-  const findingDisposition = dispositions.find(d=>/high-risk|licensure finding/i.test(d.text.split('\n')[0]) && /present|proceed/i.test(d.text));
+  const findingRecord = latest(dispositions.filter(d=>/high-risk|licensure finding/i.test(d.text.split('\n')[0])),'date');
+  const findingDisposition = findingRecord && dispositionPermission(findingRecord)==='release' ? findingRecord : null;
+  if(findingRecord && !findingDisposition)add(`Retain Clinical Director disposition ${findingRecord.letter_id}: ${dispositionPermission(findingRecord)}; clarify permission before presenting the high-risk or licensure finding.`,CD);
   if (!licences.length) missing.push('declared licences (NPI is not a licence)');
   if (wa && !licences.some(c=>c.jurisdiction_or_board==='WA' && c.number_declared===wa.credentialnumber)) missing.push(`declaration of Washington credential ${wa.credentialnumber}`);
-  if (!wa || norm(wa.status)!=='active' || !wa.expirationdate || wa.expirationdate<asOf) {
+  if (!practiceLicenceCurrent) {
     el.licensure='outstanding'; if(release)add('Obtain a current active full unrestricted Washington licence; an NPI or out-of-state licence does not satisfy the bylaw.');
   }
-  for (const c of licences.filter(c=>c.jurisdiction_or_board!=='WA')) {
-    const board = latest(records['licence-lookup-other-states'].filter(r=>r.board_state===c.jurisdiction_or_board && r.licence_number===c.number_declared && r.lookup_date<=asOf),'lookup_date');
-    if (!board) {el.licensure='outstanding';if(release)add(`Verify ${c.jurisdiction_or_board} licence ${c.number_declared}, including inactive credentials.`);}
-    else if (!/None reported/i.test(board.disciplinary_action)) {el.licensure='finding';add(`Present action on ${c.number_declared}: ${board.disciplinary_action}.`,CD);}
+  details.licences=[];
+  for (const c of licences) {
+    const isWA=c.jurisdiction_or_board==='WA';
+    const board = isWA ? waByNumber.find(r=>r.credentialnumber===c.number_declared) : latest(records['licence-lookup-other-states'].filter(r=>r.board_state===c.jurisdiction_or_board && r.licence_number===c.number_declared && r.lookup_date<=asOf),'lookup_date');
+    details.licences.push({declaration_id:c.declaration_id,number:c.number_declared,jurisdiction:c.jurisdiction_or_board,lookup_date:board?.lookup_date||null,status:board?.status||null});
+    if (!board) {licensureComplete=false;el.licensure='outstanding';if(release)add(`Verify ${c.jurisdiction_or_board} licence ${c.number_declared}, including inactive credentials.`);}
+    else if (!isWA && !/None reported/i.test(board.disciplinary_action)) {el.licensure='finding';add(`Present action on ${c.number_declared}: ${board.disciplinary_action}.`,CD);}
+    else if (isWA && board.actiontaken==='Yes' && board!==wa) {el.licensure='finding';add(`Obtain and present the board's written action on Washington licence ${c.number_declared}; do not infer the action from its indicator.`,CD);}
   }
   if (restricted) {el.licensure='finding';add(`Present Washington restriction and board evidence ${wa.credentialnumber} to the Clinical Director, Executive Committee and Governing Body.`,CD);}
   if (wa?.actiontaken==='Pending') {el.licensure='outstanding';add(`Obtain the board's written account of pending action for ${wa.credentialnumber}; do not infer its meaning from actiontaken.`);}
@@ -182,7 +213,7 @@ export function evaluate(state, id, asOf, policy, {beforeDecision=false, present
   if(validRefs.length<2)el.references='outstanding';
   else if(details.references.some(r=>r.reason==='no reply'))add('Two qualifying current references meet the element; carry surplus open requests until presentation, then close as no longer needed.');
   const findingResolved = !!findingDisposition && (!disclosureConflict || confirmedDisclosure);
-  const elementsReady = Object.entries(el).every(([k,v])=>v==='resolved' || (v==='finding' && (k==='certification' || (k==='licensure' && findingResolved))));
+  const elementsReady = licensureComplete && Object.entries(el).every(([k,v])=>v==='resolved' || (v==='finding' && (k==='certification' || (k==='licensure' && findingResolved))));
   const ready = !!release && !missing.length && elementsReady && (!highRisk || findingResolved) && (!disclosureConflict || confirmedDisclosure);
   let intake=null;
   if(missing.length) {
@@ -201,7 +232,7 @@ export function evaluate(state, id, asOf, policy, {beforeDecision=false, present
     details.terminal_record={id:record.letter_id,date:record.date,path:record.document_path,text:record.text};
     add(`File ${terminal} under ${record.letter_id} (${record.date}); stop advancing outstanding requests. Recorded reason: ${record.text.split('\n').filter(line=>line.trim() && !line.startsWith('#') && !line.startsWith('**')).join(' ')}`);
   }
-  return {app,elements:el,ready,ready_date:ready?[...readyDates].sort().at(-1):null,intake,terminal,queue,details,wa,used};
+  return {app,elements:el,ready,ready_date:ready?[...readyDates].sort().at(-1):null,intake,terminal,queue,details,wa,practiceLicenceCurrent,used};
 }
 
 export function compute(state,policy,priorSnapshot=null) {
@@ -237,7 +268,12 @@ export function compute(state,policy,priorSnapshot=null) {
     const f=outcome?.fields;
     if(f && ['approved','approved-with-conditions'].includes(f.outcome)) {
       approval=f['decision id'];const effective=f['effective date']||f['decision date'];
-      activation={active_at_export:effective<=state.as_of,effective_date:effective,cycle_end:cycleEnd(effective),privileges:f.privileges.split(';').map(p=>p.trim()).filter(Boolean)};
+      activation={active_at_export:effective<=state.as_of && state.as_of<=cycleEnd(effective) && current.practiceLicenceCurrent,effective_date:effective,cycle_end:cycleEnd(effective),privileges:f.privileges.split(';').map(p=>p.trim()).filter(Boolean)};
+      if(state.as_of>activation.cycle_end && !current.terminal) {
+        const message=`Initial appointment cycle ended ${activation.cycle_end}; reappointment is outside this procedure (LARK-MSO sections 3/check 1 and 10). The schema has no expired-cycle status; in-verification is an unresolved processing placeholder, not a renewal or clinical decision.`;
+        errors.push({application_id:id,error:message});
+        queue.push({item:message,owner:MSO,due:null});
+      } else if(effective<=state.as_of && !current.practiceLicenceCurrent && !current.terminal) queue.push({item:'Re-open licensure and obtain current Washington verification and a recorded Clinical Director disposition; historical approval is retained, but active privileges are not established from an expired or non-active practice licence.',owner:CD,due:current.wa?.expirationdate||null});
       if(!activation.privileges.length)throw new Error(`Approval ${approval} names no privileges`);
       conditions=[...outcome.text.matchAll(/^- (.+?)\s+[—–-]\s+due (\d{4}-\d{2}-\d{2})/gm)].map(m=>({condition:m[1],due:m[2]}));
       if(current.wa?.expirationdate && current.wa.expirationdate>=effective && current.wa.expirationdate<=activation.cycle_end)conditions.push({condition:`Re-verify Washington licence ${current.wa.credentialnumber} before expiry.`,due:current.wa.expirationdate});
@@ -249,7 +285,7 @@ export function compute(state,policy,priorSnapshot=null) {
     if(decisions.some(d=>!d.admitted))status='decision-inadmissible';
     if(f?.outcome==='deferred-pending-information'){status='deferred';queue.push({item:`Chase exactly the Governing Body hold: ${f.reason}`,owner:MSO,due:null});}
     if(f?.outcome==='denied'){status='denied';queue.push({item:`Record denial ${f['decision id']}: ${f.reason}`,owner:MSO,due:null});}
-    if(activation)status=activation.active_at_export?(conditions.length?'active-with-conditions':'active'):'approved-not-yet-effective';
+    if(activation)status=activation.active_at_export?(conditions.length?'active-with-conditions':'active'):activation.effective_date>state.as_of?'approved-not-yet-effective':'in-verification';
     if(current.intake)status=current.intake;
     if(current.terminal){
       status=current.terminal;activation=null;approval=null;conditions=[];

@@ -1,6 +1,6 @@
 {
   "schema_version": "credentialing-snapshot/1",
-  "snapshot_id": "7034510b-2f8f-46c1-9d94-6a05527fb441",
+  "snapshot_id": "4d2d2069-26a5-444f-b51c-940e9b6356ea",
   "predecessor": null,
   "batch": 1,
   "as_of": "2026-03-16",
@@ -44,10 +44,10 @@
     "deliverables/audit/batch-01.json",
     "deliverables/results/batch-01.json",
     "deliverables/run-log.md",
-    "deliverables/superseded/56dc9369-d421-4f04-a75a-e8afceee7d96/snapshots-batch-01.json",
-    "deliverables/superseded/56dc9369-d421-4f04-a75a-e8afceee7d96/state-batch-01.json",
-    "deliverables/superseded/56dc9369-d421-4f04-a75a-e8afceee7d96/audit-batch-01.json",
-    "deliverables/superseded/56dc9369-d421-4f04-a75a-e8afceee7d96/results-batch-01.json"
+    "deliverables/superseded/7034510b-2f8f-46c1-9d94-6a05527fb441/snapshots-batch-01.json",
+    "deliverables/superseded/7034510b-2f8f-46c1-9d94-6a05527fb441/state-batch-01.json",
+    "deliverables/superseded/7034510b-2f8f-46c1-9d94-6a05527fb441/audit-batch-01.json",
+    "deliverables/superseded/7034510b-2f8f-46c1-9d94-6a05527fb441/results-batch-01.json"
   ],
   "rules_file": "deliverables/rules.md",
   "applications": [
@@ -177,7 +177,7 @@
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-0403 (Orchard Row Specialty Clinic); 1 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-0403 (Orchard Row Specialty Clinic); 1 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         }
@@ -303,7 +303,7 @@
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-0802 (Northsound Medical Group); 1 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-0802 (Northsound Medical Group); 1 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         },
@@ -343,7 +343,7 @@
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-0903 (Harrowgate Community Health); 1 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-0903 (Harrowgate Community Health); 1 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         },
@@ -383,12 +383,12 @@
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-1001 (Pinevale University Hospital); 1 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-1001 (Pinevale University Hospital); 1 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-1002 (Larkhollow Physicians Network); 1 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-1002 (Larkhollow Physicians Network); 1 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         },
@@ -443,12 +443,12 @@
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-1101 (Tolliver General Hospital); 1 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-1101 (Tolliver General Hospital); 1 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-1103 (Willowmere Health Cooperative); 1 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-1103 (Willowmere Health Cooperative); 1 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         },
@@ -518,22 +518,22 @@
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-1200 (Halloway Point School of Medicine); 1 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-1200 (Halloway Point School of Medicine); 1 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-1201 (Westmarch University Medical Center); 1 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-1201 (Westmarch University Medical Center); 1 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-1202 (Stonebridge Medical Associates); 1 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-1202 (Stonebridge Medical Associates); 1 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-1203 (Northsound Medical Group); 1 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-1203 (Northsound Medical Group); 1 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         },
@@ -715,12 +715,12 @@
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-1603 (Willowmere Health Cooperative); 1 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-1603 (Willowmere Health Cooperative); 1 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-1604 (Harrowgate Community Health); 1 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-1604 (Harrowgate Community Health); 1 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         }
@@ -750,7 +750,7 @@
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-1704 (Kettlebrook Family Clinic); 1 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-1704 (Kettlebrook Family Clinic); 1 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         },
@@ -785,17 +785,17 @@
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-1801 (Cedar Quarry University Hospital); 1 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-1801 (Cedar Quarry University Hospital); 1 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-1802 (Willowmere Health Cooperative); 1 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-1802 (Willowmere Health Cooperative); 1 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-1803 (Silverbeck Physicians Group); 1 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-1803 (Silverbeck Physicians Group); 1 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         },
@@ -915,7 +915,7 @@
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-2000 (Steadmere University School of Medicine); 3 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-2000 (Steadmere University School of Medicine); 3 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         },
@@ -955,7 +955,7 @@
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-2100 (Cascade Valley College of Medicine); 3 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-2100 (Cascade Valley College of Medicine); 3 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         },
@@ -965,7 +965,7 @@
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-2103 (Greyfen Regional Hospital); 1 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-2103 (Greyfen Regional Hospital); 1 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         },
@@ -1015,7 +1015,7 @@
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-2201 (Westmarch University Medical Center); 3 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-2201 (Westmarch University Medical Center); 3 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         },
@@ -1025,7 +1025,7 @@
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-2202 (Stonebridge Medical Associates); 1 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-2202 (Stonebridge Medical Associates); 1 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         },
@@ -1170,7 +1170,7 @@
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-2603 (Willowmere Health Cooperative); 1 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-2603 (Willowmere Health Cooperative); 1 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         },
@@ -1215,12 +1215,12 @@
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-2702 (Drumlin Bay Medical Center); 1 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-2702 (Drumlin Bay Medical Center); 1 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-2704 (Orchard Row Specialty Clinic); 1 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-2704 (Orchard Row Specialty Clinic); 1 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         },
@@ -1355,7 +1355,7 @@
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-3102 (Two Rivers Health Partners); 1 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-3102 (Two Rivers Health Partners); 1 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         },
@@ -1400,17 +1400,17 @@
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-3201 (Saltmarsh Regional Health); 1 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-3201 (Saltmarsh Regional Health); 1 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-3202 (Bellamy Creek Medical Center); 1 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-3202 (Bellamy Creek Medical Center); 1 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-3203 (Willowmere Health Cooperative); 1 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-3203 (Willowmere Health Cooperative); 1 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         },
@@ -1470,7 +1470,7 @@
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-3303 (Willowmere Health Cooperative); 2 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-3303 (Willowmere Health Cooperative); 2 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         },

@@ -9,6 +9,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-0100",
+        "outcome": "confirmed",
         "declared": {
           "from": "2006-08-21",
           "to": "2010-06-30",
@@ -25,6 +26,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-0101",
+        "outcome": "confirmed",
         "declared": {
           "from": "2010-07-01",
           "to": "2013-06-30",
@@ -39,7 +41,9 @@
       {
         "entry_id": "ENT-0102",
         "element": "experience",
+        "required": false,
         "reply_id": "VR-0102",
+        "outcome": "confirmed",
         "declared": {
           "from": "2013-07-08",
           "to": "2019-09-30",
@@ -56,6 +60,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-0103",
+        "outcome": "confirmed",
         "declared": {
           "from": "2019-10-07",
           "to": "",
@@ -90,6 +95,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-0100",
+        "number": "MD60148293",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "packet_ready_date": "2026-03-02",
     "used_verifications": [
       "VR-0100",
@@ -112,6 +126,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-0200",
+        "outcome": "confirmed",
         "declared": {
           "from": "2007-08-20",
           "to": "2011-06-30",
@@ -128,6 +143,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-0201",
+        "outcome": "confirmed",
         "declared": {
           "from": "2011-07-01",
           "to": "2014-06-30",
@@ -144,6 +160,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-0202",
+        "outcome": "confirmed",
         "declared": {
           "from": "2014-07-07",
           "to": "2021-12-31",
@@ -160,6 +177,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-0203",
+        "outcome": "confirmed",
         "declared": {
           "from": "2022-01-10",
           "to": "",
@@ -195,6 +213,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-0200",
+        "number": "MD60172044",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "packet_ready_date": "2026-03-09",
     "used_verifications": [
       "VR-0200",
@@ -217,6 +244,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-0300",
+        "outcome": "confirmed",
         "declared": {
           "from": "2004-08-23",
           "to": "2008-06-30",
@@ -233,6 +261,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-0301",
+        "outcome": "confirmed",
         "declared": {
           "from": "2008-07-01",
           "to": "2011-06-30",
@@ -247,7 +276,9 @@
       {
         "entry_id": "ENT-0302",
         "element": "experience",
+        "required": false,
         "reply_id": "VR-0302",
+        "outcome": "confirmed",
         "declared": {
           "from": "2011-07-05",
           "to": "2018-08-31",
@@ -264,6 +295,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-0303",
+        "outcome": "confirmed",
         "declared": {
           "from": "2018-09-04",
           "to": "",
@@ -298,6 +330,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-0300",
+        "number": "MD60103877",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "packet_ready_date": "2026-03-05",
     "used_verifications": [
       "VR-0300",
@@ -320,6 +361,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-0400",
+        "outcome": "confirmed",
         "declared": {
           "from": "2009-08-24",
           "to": "2013-06-30",
@@ -336,6 +378,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-0401",
+        "outcome": "confirmed",
         "declared": {
           "from": "2013-07-01",
           "to": "2016-06-30",
@@ -352,6 +395,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-0402",
+        "outcome": "confirmed",
         "declared": {
           "from": "2016-07-30",
           "to": "2022-04-30",
@@ -368,6 +412,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-0403",
+        "outcome": "confirmed",
         "declared": {
           "from": "2022-05-09",
           "to": "",
@@ -402,6 +447,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-0400",
+        "number": "MD60195610",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "packet_ready_date": "2026-03-16",
     "used_verifications": [
       "VR-0400",
@@ -424,6 +478,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-0500",
+        "outcome": "confirmed",
         "declared": {
           "from": "2005-08-22",
           "to": "2009-06-30",
@@ -440,6 +495,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-0501",
+        "outcome": "confirmed",
         "declared": {
           "from": "2009-07-01",
           "to": "2013-06-30",
@@ -454,7 +510,9 @@
       {
         "entry_id": "ENT-0502",
         "element": "experience",
+        "required": false,
         "reply_id": "VR-0502",
+        "outcome": "confirmed",
         "declared": {
           "from": "2013-07-31",
           "to": "2020-11-30",
@@ -471,6 +529,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-0503",
+        "outcome": "confirmed",
         "declared": {
           "from": "2020-12-07",
           "to": "",
@@ -513,6 +572,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-0500",
+        "number": "MD60121458",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "packet_ready_date": "2026-03-12",
     "used_verifications": [
       "VR-0500",
@@ -535,6 +603,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-0600",
+        "outcome": "confirmed",
         "declared": {
           "from": "2008-08-25",
           "to": "2012-06-30",
@@ -551,6 +620,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-0601",
+        "outcome": "confirmed",
         "declared": {
           "from": "2012-07-01",
           "to": "2016-06-30",
@@ -567,6 +637,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-0602",
+        "outcome": "confirmed",
         "declared": {
           "from": "2016-07-11",
           "to": "",
@@ -601,6 +672,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-0600",
+        "number": "MD60188732",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "packet_ready_date": "2026-03-12",
     "used_verifications": [
       "VR-0600",
@@ -622,6 +702,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-0700",
+        "outcome": "confirmed",
         "declared": {
           "from": "2003-08-25",
           "to": "2007-06-30",
@@ -638,6 +719,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-0701",
+        "outcome": "confirmed",
         "declared": {
           "from": "2007-07-01",
           "to": "2011-06-30",
@@ -652,7 +734,9 @@
       {
         "entry_id": "ENT-0702",
         "element": "experience",
+        "required": false,
         "reply_id": "VR-0702",
+        "outcome": "confirmed",
         "declared": {
           "from": "2011-07-06",
           "to": "2017-03-31",
@@ -669,6 +753,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-0703",
+        "outcome": "confirmed",
         "declared": {
           "from": "2017-04-10",
           "to": "",
@@ -703,6 +788,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-0700",
+        "number": "MD60094512",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "packet_ready_date": "2026-03-02",
     "used_verifications": [
       "VR-0700",
@@ -725,6 +819,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-0800",
+        "outcome": "confirmed",
         "declared": {
           "from": "2006-08-21",
           "to": "2010-06-30",
@@ -741,6 +836,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-0801",
+        "outcome": "confirmed",
         "declared": {
           "from": "2010-07-01",
           "to": "2014-06-30",
@@ -757,6 +853,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-0802",
+        "outcome": "confirmed",
         "declared": {
           "from": "2014-07-14",
           "to": "",
@@ -791,6 +888,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-0800",
+        "number": "MD60152203",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "packet_ready_date": "2026-03-16",
     "used_verifications": [
       "VR-0800",
@@ -812,6 +918,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-0900",
+        "outcome": "confirmed",
         "declared": {
           "from": "2005-08-22",
           "to": "2009-06-30",
@@ -828,6 +935,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-0901",
+        "outcome": "confirmed",
         "declared": {
           "from": "2009-07-01",
           "to": "2012-06-30",
@@ -842,7 +950,9 @@
       {
         "entry_id": "ENT-0902",
         "element": "experience",
+        "required": false,
         "reply_id": "VR-0902",
+        "outcome": "confirmed",
         "declared": {
           "from": "2012-07-09",
           "to": "2020-06-30",
@@ -859,6 +969,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-0903",
+        "outcome": "confirmed",
         "declared": {
           "from": "2020-07-06",
           "to": "",
@@ -893,6 +1004,22 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-0900",
+        "number": "MD60117960",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      },
+      {
+        "declaration_id": "DEC-0901",
+        "number": "MD2009114",
+        "jurisdiction": "OR",
+        "lookup_date": "2026-02-24",
+        "status": "Active"
+      }
+    ],
     "packet_ready_date": "2026-03-26",
     "used_verifications": [
       "VR-0900",
@@ -915,6 +1042,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-1000",
+        "outcome": "confirmed",
         "declared": {
           "from": "2015-08-24",
           "to": "2019-06-30",
@@ -931,6 +1059,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-1001",
+        "outcome": "confirmed",
         "declared": {
           "from": "2019-07-01",
           "to": "2022-06-30",
@@ -947,6 +1076,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-1002",
+        "outcome": "confirmed",
         "declared": {
           "from": "2022-07-11",
           "to": "",
@@ -981,6 +1111,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-1000",
+        "number": "MD60230187",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "packet_ready_date": "2026-03-23",
     "used_verifications": [
       "VR-1000",
@@ -1002,6 +1141,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-1100",
+        "outcome": "confirmed",
         "declared": {
           "from": "2000-08-21",
           "to": "2004-06-30",
@@ -1018,6 +1158,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-1101",
+        "outcome": "confirmed",
         "declared": {
           "from": "2004-07-01",
           "to": "2009-06-30",
@@ -1032,7 +1173,9 @@
       {
         "entry_id": "ENT-1102",
         "element": "experience",
+        "required": false,
         "reply_id": "VR-1102",
+        "outcome": "confirmed",
         "declared": {
           "from": "2009-07-13",
           "to": "2016-09-30",
@@ -1049,6 +1192,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-1103",
+        "outcome": "confirmed",
         "declared": {
           "from": "2016-10-03",
           "to": "",
@@ -1089,6 +1233,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-1100",
+        "number": "MD60071336",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "packet_ready_date": "2026-04-02",
     "used_verifications": [
       "VR-1100",
@@ -1112,6 +1265,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-1200",
+        "outcome": "confirmed",
         "declared": {
           "from": "2005-08-22",
           "to": "2009-06-30",
@@ -1128,6 +1282,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-1201",
+        "outcome": "confirmed",
         "declared": {
           "from": "2009-07-01",
           "to": "2012-06-30",
@@ -1144,6 +1299,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-1202",
+        "outcome": "confirmed",
         "declared": {
           "from": "2012-07-16",
           "to": "",
@@ -1160,6 +1316,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-1203",
+        "outcome": "confirmed",
         "declared": {
           "from": "2015-09-01",
           "to": "2021-06-30",
@@ -1194,6 +1351,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-1200",
+        "number": "MD60113472",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "packet_ready_date": "2026-04-06",
     "used_verifications": [
       "VR-1200",
@@ -1216,6 +1382,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-1300",
+        "outcome": "confirmed",
         "declared": {
           "from": "2004-08-23",
           "to": "2008-06-30",
@@ -1232,6 +1399,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-1301",
+        "outcome": "confirmed",
         "declared": {
           "from": "2008-07-01",
           "to": "2011-06-30",
@@ -1246,7 +1414,9 @@
       {
         "entry_id": "ENT-1302",
         "element": "experience",
+        "required": false,
         "reply_id": "VR-1302",
+        "outcome": "confirmed",
         "declared": {
           "from": "2011-07-11",
           "to": "2019-05-31",
@@ -1263,6 +1433,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-1303",
+        "outcome": "confirmed",
         "declared": {
           "from": "2019-06-10",
           "to": "",
@@ -1297,6 +1468,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-1300",
+        "number": "MD60099184",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "packet_ready_date": "2026-03-05",
     "used_verifications": [
       "VR-1300",
@@ -1319,6 +1499,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-1400",
+        "outcome": "confirmed",
         "declared": {
           "from": "2006-08-21",
           "to": "2010-06-30",
@@ -1335,6 +1516,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-1401",
+        "outcome": "confirmed",
         "declared": {
           "from": "2010-07-01",
           "to": "2013-06-30",
@@ -1349,7 +1531,9 @@
       {
         "entry_id": "ENT-1402",
         "element": "experience",
+        "required": false,
         "reply_id": "VR-1402",
+        "outcome": "confirmed",
         "declared": {
           "from": "2013-07-15",
           "to": "2020-10-31",
@@ -1366,6 +1550,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-1403",
+        "outcome": "confirmed",
         "declared": {
           "from": "2020-11-09",
           "to": "",
@@ -1401,6 +1586,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-1400",
+        "number": "MD60146622",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "packet_ready_date": null,
     "used_verifications": [
       "VR-1400",
@@ -1422,6 +1616,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-1500",
+        "outcome": "confirmed",
         "declared": {
           "from": "2000-08-21",
           "to": "2004-06-30",
@@ -1438,6 +1633,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-1501",
+        "outcome": "confirmed",
         "declared": {
           "from": "2004-07-01",
           "to": "2009-06-30",
@@ -1452,7 +1648,9 @@
       {
         "entry_id": "ENT-1502",
         "element": "experience",
+        "required": false,
         "reply_id": "VR-1502",
+        "outcome": "confirmed",
         "declared": {
           "from": "2009-07-13",
           "to": "2018-12-31",
@@ -1469,6 +1667,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-1503",
+        "outcome": "confirmed",
         "declared": {
           "from": "2019-01-14",
           "to": "",
@@ -1503,6 +1702,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-1500",
+        "number": "MD60069441",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "packet_ready_date": null,
     "used_verifications": [
       "VR-1500",
@@ -1525,6 +1733,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-1600",
+        "outcome": "confirmed",
         "declared": {
           "from": "2008-08-25",
           "to": "2012-06-30",
@@ -1541,6 +1750,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-1601",
+        "outcome": "confirmed",
         "declared": {
           "from": "2012-07-01",
           "to": "2015-06-30",
@@ -1557,6 +1767,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-1602",
+        "outcome": "confirmed",
         "declared": {
           "from": "2015-07-06",
           "to": "2021-06-30",
@@ -1573,6 +1784,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-1603",
+        "outcome": "confirmed",
         "declared": {
           "from": "2018-09-01",
           "to": "2023-12-31",
@@ -1589,6 +1801,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-1604",
+        "outcome": "confirmed",
         "declared": {
           "from": "2024-01-08",
           "to": "",
@@ -1623,6 +1836,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-1600",
+        "number": "MD60131055",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "packet_ready_date": "2026-03-23",
     "used_verifications": [
       "VR-1600",
@@ -1646,6 +1868,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-1700",
+        "outcome": "confirmed",
         "declared": {
           "from": "2003-08-25",
           "to": "2007-06-30",
@@ -1662,6 +1885,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-1701",
+        "outcome": "confirmed",
         "declared": {
           "from": "2007-07-01",
           "to": "2010-06-30",
@@ -1676,7 +1900,9 @@
       {
         "entry_id": "ENT-1702",
         "element": "experience",
+        "required": false,
         "reply_id": "VR-1702",
+        "outcome": "confirmed",
         "declared": {
           "from": "2010-07-12",
           "to": "2019-03-31",
@@ -1691,7 +1917,9 @@
       {
         "entry_id": "ENT-1703",
         "element": "experience",
+        "required": false,
         "reply_id": "VR-1703",
+        "outcome": "confirmed",
         "declared": {
           "from": "2012-01-01",
           "to": "2019-03-31",
@@ -1708,6 +1936,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-1704",
+        "outcome": "confirmed",
         "declared": {
           "from": "2019-11-06",
           "to": "",
@@ -1750,6 +1979,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-1700",
+        "number": "MD60088273",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "packet_ready_date": "2026-04-02",
     "used_verifications": [
       "VR-1700",
@@ -1773,6 +2011,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-1800",
+        "outcome": "confirmed",
         "declared": {
           "from": "2010-08-23",
           "to": "2014-06-30",
@@ -1789,6 +2028,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-1801",
+        "outcome": "confirmed",
         "declared": {
           "from": "2014-07-01",
           "to": "2017-06-30",
@@ -1805,6 +2045,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-1802",
+        "outcome": "confirmed",
         "declared": {
           "from": "2017-07-10",
           "to": "2024-05-01",
@@ -1821,6 +2062,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-1803",
+        "outcome": "confirmed",
         "declared": {
           "from": "2024-06-02",
           "to": "",
@@ -1863,6 +2105,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-1800",
+        "number": "MD60204119",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "packet_ready_date": "2026-03-30",
     "used_verifications": [
       "VR-1800",
@@ -1885,6 +2136,7 @@
         "element": "education",
         "required": true,
         "reply_id": null,
+        "outcome": null,
         "declared": {
           "from": "2007-08-20",
           "to": "2011-06-30",
@@ -1897,6 +2149,7 @@
         "element": "education",
         "required": true,
         "reply_id": null,
+        "outcome": null,
         "declared": {
           "from": "2011-07-01",
           "to": "2014-06-30",
@@ -1909,6 +2162,7 @@
         "element": "experience",
         "required": true,
         "reply_id": null,
+        "outcome": null,
         "declared": {
           "from": "2014-07-14",
           "to": "",
@@ -1926,6 +2180,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-1900",
+        "number": "MD60169038",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "packet_ready_date": null,
     "used_verifications": [],
     "terminal": null
@@ -1940,6 +2203,7 @@
         "element": "education",
         "required": true,
         "reply_id": null,
+        "outcome": null,
         "declared": {
           "from": "2005-08-22",
           "to": "2009-06-30",
@@ -1952,6 +2216,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-2001",
+        "outcome": "confirmed",
         "declared": {
           "from": "2009-07-01",
           "to": "2013-06-30",
@@ -1968,6 +2233,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-2002",
+        "outcome": "confirmed",
         "declared": {
           "from": "2013-07-22",
           "to": "",
@@ -2002,6 +2268,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-2000",
+        "number": "MD60124773",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "packet_ready_date": null,
     "used_verifications": [
       "VR-2001",
@@ -2022,6 +2297,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-2100",
+        "outcome": "confirmed",
         "declared": {
           "from": "1998-08-24",
           "to": "2002-06-30",
@@ -2038,6 +2314,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-2101",
+        "outcome": "confirmed",
         "declared": {
           "from": "2002-07-01",
           "to": "2005-06-30",
@@ -2052,7 +2329,9 @@
       {
         "entry_id": "ENT-2102",
         "element": "experience",
+        "required": false,
         "reply_id": "VR-2102",
+        "outcome": "confirmed",
         "declared": {
           "from": "2005-07-11",
           "to": "2015-08-31",
@@ -2069,6 +2348,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-2103",
+        "outcome": "confirmed",
         "declared": {
           "from": "2015-09-07",
           "to": "",
@@ -2103,6 +2383,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-2100",
+        "number": "MD60041907",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "packet_ready_date": "2026-04-08",
     "used_verifications": [
       "VR-2100",
@@ -2125,6 +2414,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-2200",
+        "outcome": "confirmed",
         "declared": {
           "from": "2004-08-23",
           "to": "2008-06-30",
@@ -2141,6 +2431,7 @@
         "element": "education",
         "required": true,
         "reply_id": null,
+        "outcome": null,
         "declared": {
           "from": "2008-07-01",
           "to": "2012-06-30",
@@ -2153,6 +2444,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-2202",
+        "outcome": "confirmed",
         "declared": {
           "from": "2012-07-09",
           "to": "",
@@ -2187,6 +2479,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-2200",
+        "number": "MD60107884",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "packet_ready_date": null,
     "used_verifications": [
       "VR-2200",
@@ -2207,6 +2508,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-2300",
+        "outcome": "confirmed",
         "declared": {
           "from": "2002-08-26",
           "to": "2006-06-30",
@@ -2223,6 +2525,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-2301",
+        "outcome": "confirmed",
         "declared": {
           "from": "2006-07-01",
           "to": "2010-06-30",
@@ -2237,7 +2540,9 @@
       {
         "entry_id": "ENT-2302",
         "element": "experience",
+        "required": false,
         "reply_id": "VR-2302",
+        "outcome": "confirmed",
         "declared": {
           "from": "2010-07-12",
           "to": "2017-07-31",
@@ -2254,6 +2559,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-2303",
+        "outcome": "confirmed",
         "declared": {
           "from": "2017-08-07",
           "to": "",
@@ -2288,6 +2594,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-2300",
+        "number": "MD60083116",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "packet_ready_date": null,
     "used_verifications": [
       "VR-2300",
@@ -2309,6 +2624,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-2400",
+        "outcome": "confirmed",
         "declared": {
           "from": "2009-08-24",
           "to": "2013-06-30",
@@ -2325,6 +2641,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-2401",
+        "outcome": "confirmed",
         "declared": {
           "from": "2013-07-01",
           "to": "2017-06-30",
@@ -2341,6 +2658,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-2402",
+        "outcome": "confirmed",
         "declared": {
           "from": "2017-07-17",
           "to": "",
@@ -2365,7 +2683,7 @@
         "referee_id": "REF-2401",
         "reply_id": "RR-2401",
         "ok": false,
-        "reason": "relative, spouse or partner"
+        "reason": "relative, spouse or partner box is Yes or unanswered"
       }
     ],
     "supported": [
@@ -2374,6 +2692,15 @@
     "unsupported": [],
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
+    ],
+    "licences": [
+      {
+        "declaration_id": "DEC-2400",
+        "number": "MD60199450",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
     ],
     "packet_ready_date": null,
     "used_verifications": [
@@ -2395,6 +2722,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-2500",
+        "outcome": "confirmed",
         "declared": {
           "from": "2000-08-21",
           "to": "2004-06-30",
@@ -2411,6 +2739,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-2501",
+        "outcome": "confirmed",
         "declared": {
           "from": "2004-07-01",
           "to": "2007-06-30",
@@ -2427,6 +2756,7 @@
         "element": "experience",
         "required": false,
         "reply_id": "VR-2502",
+        "outcome": "confirmed",
         "declared": {
           "from": "2007-07-16",
           "to": "2018-12-31",
@@ -2443,6 +2773,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-2503",
+        "outcome": "confirmed",
         "declared": {
           "from": "2019-01-14",
           "to": "",
@@ -2477,6 +2808,22 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-2500",
+        "number": "MD60247731",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      },
+      {
+        "declaration_id": "DEC-2501",
+        "number": "MD2004776",
+        "jurisdiction": "OR",
+        "lookup_date": "2024-04-27",
+        "status": "Active"
+      }
+    ],
     "packet_ready_date": "2026-02-03",
     "used_verifications": [
       "VR-2500",
@@ -2499,6 +2846,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-2600",
+        "outcome": "confirmed",
         "declared": {
           "from": "2003-08-25",
           "to": "2007-06-30",
@@ -2515,6 +2863,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-2601",
+        "outcome": "confirmed",
         "declared": {
           "from": "2007-07-01",
           "to": "2010-06-30",
@@ -2529,7 +2878,9 @@
       {
         "entry_id": "ENT-2602",
         "element": "experience",
+        "required": false,
         "reply_id": "VR-2602",
+        "outcome": "confirmed",
         "declared": {
           "from": "2010-07-12",
           "to": "2019-11-30",
@@ -2546,6 +2897,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-2603",
+        "outcome": "confirmed",
         "declared": {
           "from": "2019-12-09",
           "to": "",
@@ -2583,6 +2935,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-2600",
+        "number": "MD60091267",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "packet_ready_date": "2026-03-23",
     "used_verifications": [
       "VR-2600",
@@ -2605,6 +2966,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-2700",
+        "outcome": "confirmed",
         "declared": {
           "from": "1997-08-25",
           "to": "2001-06-30",
@@ -2621,6 +2983,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-2701",
+        "outcome": "confirmed",
         "declared": {
           "from": "2001-07-01",
           "to": "2006-06-30",
@@ -2637,6 +3000,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-2702",
+        "outcome": "confirmed",
         "declared": {
           "from": "2006-07-01",
           "to": "2009-06-30",
@@ -2651,7 +3015,9 @@
       {
         "entry_id": "ENT-2703",
         "element": "experience",
+        "required": false,
         "reply_id": "VR-2703",
+        "outcome": "confirmed",
         "declared": {
           "from": "2009-07-13",
           "to": "2018-04-30",
@@ -2668,6 +3034,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-2704",
+        "outcome": "confirmed",
         "declared": {
           "from": "2018-05-14",
           "to": "",
@@ -2702,6 +3069,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-2700",
+        "number": "MD60035528",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "packet_ready_date": null,
     "used_verifications": [
       "VR-2700",
@@ -2726,6 +3102,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-2800",
+        "outcome": "confirmed",
         "declared": {
           "from": "2006-08-21",
           "to": "2010-06-30",
@@ -2742,6 +3119,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-2801",
+        "outcome": "confirmed",
         "declared": {
           "from": "2010-07-01",
           "to": "2013-06-30",
@@ -2758,6 +3136,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-2802",
+        "outcome": "confirmed",
         "declared": {
           "from": "2013-07-15",
           "to": "",
@@ -2792,6 +3171,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-2800",
+        "number": "MD60143390",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "terminal_record": {
       "id": "LTR-0034",
       "date": "2026-04-06",
@@ -2819,6 +3207,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-2900",
+        "outcome": "confirmed",
         "declared": {
           "from": "2002-08-26",
           "to": "2006-06-30",
@@ -2835,6 +3224,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-2901",
+        "outcome": "confirmed",
         "declared": {
           "from": "2006-07-01",
           "to": "2009-06-30",
@@ -2851,6 +3241,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-2902",
+        "outcome": "confirmed",
         "declared": {
           "from": "2009-07-13",
           "to": "",
@@ -2885,6 +3276,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-2900",
+        "number": "MD60078845",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "terminal_record": {
       "id": "LTR-0027",
       "date": "2026-03-31",
@@ -2912,6 +3312,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-3000",
+        "outcome": "confirmed",
         "declared": {
           "from": "2008-08-25",
           "to": "2012-06-30",
@@ -2928,6 +3329,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-3001",
+        "outcome": "confirmed",
         "declared": {
           "from": "2012-07-01",
           "to": "2015-06-30",
@@ -2944,6 +3346,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-3002",
+        "outcome": "confirmed-with-discrepancy",
         "declared": {
           "from": "2018-03-05",
           "to": "2021-11-30",
@@ -2960,6 +3363,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-3003",
+        "outcome": "confirmed",
         "declared": {
           "from": "2022-09-12",
           "to": "",
@@ -2976,6 +3380,7 @@
         "element": "experience",
         "required": false,
         "reply_id": "VR-3004",
+        "outcome": "confirmed",
         "declared": {
           "from": "2015-07-13",
           "to": "2018-02-28",
@@ -2992,6 +3397,7 @@
         "element": "experience",
         "required": true,
         "reply_id": null,
+        "outcome": null,
         "declared": {
           "from": "2021-12-06",
           "to": "2022-09-05",
@@ -3022,6 +3428,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-3000",
+        "number": "MD60136671",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "packet_ready_date": null,
     "used_verifications": [
       "VR-3000",
@@ -3045,6 +3460,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-3100",
+        "outcome": "confirmed",
         "declared": {
           "from": "2005-08-22",
           "to": "2009-06-30",
@@ -3061,6 +3477,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-3101",
+        "outcome": "confirmed",
         "declared": {
           "from": "2009-07-01",
           "to": "2012-06-30",
@@ -3077,6 +3494,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-3102",
+        "outcome": "confirmed",
         "declared": {
           "from": "2012-07-16",
           "to": "",
@@ -3111,6 +3529,22 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-3100",
+        "number": "MD2012338",
+        "jurisdiction": "OR",
+        "lookup_date": "2026-02-21",
+        "status": "Active"
+      },
+      {
+        "declaration_id": "DEC-3102",
+        "number": "MD60251004",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "packet_ready_date": "2026-04-09",
     "used_verifications": [
       "VR-3100",
@@ -3132,6 +3566,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-3200",
+        "outcome": "confirmed",
         "declared": {
           "from": "2007-08-20",
           "to": "2011-06-30",
@@ -3148,6 +3583,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-3201",
+        "outcome": "confirmed",
         "declared": {
           "from": "2011-07-01",
           "to": "2015-06-30",
@@ -3164,6 +3600,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-3202",
+        "outcome": "confirmed",
         "declared": {
           "from": "2015-07-20",
           "to": "2021-09-30",
@@ -3180,6 +3617,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-3203",
+        "outcome": "confirmed",
         "declared": {
           "from": "2021-10-11",
           "to": "",
@@ -3214,6 +3652,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-3200",
+        "number": "MD60139908",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "packet_ready_date": "2026-04-02",
     "used_verifications": [
       "VR-3200",
@@ -3236,6 +3683,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-3300",
+        "outcome": "confirmed",
         "declared": {
           "from": "2001-08-27",
           "to": "2005-06-30",
@@ -3252,6 +3700,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-3301",
+        "outcome": "confirmed",
         "declared": {
           "from": "2005-07-01",
           "to": "2009-06-30",
@@ -3266,7 +3715,9 @@
       {
         "entry_id": "ENT-3302",
         "element": "experience",
+        "required": false,
         "reply_id": "VR-3302",
+        "outcome": "confirmed",
         "declared": {
           "from": "2009-07-13",
           "to": "2020-02-28",
@@ -3283,6 +3734,7 @@
         "element": "experience",
         "required": true,
         "reply_id": null,
+        "outcome": null,
         "declared": {
           "from": "2020-03-09",
           "to": "",
@@ -3313,6 +3765,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-3300",
+        "number": "MD60076214",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "packet_ready_date": null,
     "used_verifications": [
       "VR-3300",
@@ -3334,6 +3795,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-3400",
+        "outcome": "confirmed",
         "declared": {
           "from": "2004-08-23",
           "to": "2008-06-30",
@@ -3350,6 +3812,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-3401",
+        "outcome": "confirmed",
         "declared": {
           "from": "2008-07-01",
           "to": "2011-06-30",
@@ -3366,6 +3829,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-3402",
+        "outcome": "confirmed",
         "declared": {
           "from": "2011-07-11",
           "to": "",
@@ -3400,6 +3864,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-3400",
+        "number": "MD60102558",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "packet_ready_date": "2026-02-26",
     "used_verifications": [
       "VR-3400",
@@ -3421,6 +3894,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-3500",
+        "outcome": "confirmed",
         "declared": {
           "from": "2003-08-25",
           "to": "2007-06-30",
@@ -3437,6 +3911,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-3501",
+        "outcome": "confirmed",
         "declared": {
           "from": "2007-07-01",
           "to": "2012-06-30",
@@ -3453,6 +3928,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-3502",
+        "outcome": "confirmed",
         "declared": {
           "from": "2012-07-16",
           "to": "2023-06-30",
@@ -3469,6 +3945,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-3503",
+        "outcome": "confirmed",
         "declared": {
           "from": "2023-07-10",
           "to": "",
@@ -3503,6 +3980,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-3500",
+        "number": "MD60114807",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "packet_ready_date": "2026-03-12",
     "used_verifications": [
       "VR-3500",
@@ -3525,6 +4011,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-3600",
+        "outcome": "confirmed",
         "declared": {
           "from": "2005-08-22",
           "to": "2009-06-30",
@@ -3541,6 +4028,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-3601",
+        "outcome": "confirmed",
         "declared": {
           "from": "2009-07-01",
           "to": "2012-06-30",
@@ -3557,6 +4045,7 @@
         "element": "experience",
         "required": true,
         "reply_id": null,
+        "outcome": null,
         "declared": {
           "from": "2012-07-16",
           "to": "2019-08-31",
@@ -3569,6 +4058,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-3603",
+        "outcome": "confirmed",
         "declared": {
           "from": "2019-09-09",
           "to": "",
@@ -3603,6 +4093,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-3600",
+        "number": "MD60110392",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "packet_ready_date": null,
     "used_verifications": [
       "VR-3600",
@@ -3624,6 +4123,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-3700",
+        "outcome": "confirmed",
         "declared": {
           "from": "2006-08-21",
           "to": "2010-06-30",
@@ -3640,6 +4140,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-3701",
+        "outcome": "confirmed",
         "declared": {
           "from": "2010-07-01",
           "to": "2013-06-30",
@@ -3656,6 +4157,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-3702",
+        "outcome": "confirmed",
         "declared": {
           "from": "2013-07-15",
           "to": "2021-03-31",
@@ -3672,6 +4174,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-3703",
+        "outcome": "confirmed",
         "declared": {
           "from": "2021-04-12",
           "to": "",
@@ -3706,6 +4209,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-3700",
+        "number": "MD60147715",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "packet_ready_date": "2026-03-09",
     "used_verifications": [
       "VR-3700",
@@ -3728,6 +4240,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-3800",
+        "outcome": "confirmed",
         "declared": {
           "from": "2008-08-25",
           "to": "2012-06-30",
@@ -3744,6 +4257,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-3801",
+        "outcome": "confirmed",
         "declared": {
           "from": "2012-07-01",
           "to": "2015-06-30",
@@ -3760,6 +4274,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-3802",
+        "outcome": "confirmed",
         "declared": {
           "from": "2015-07-13",
           "to": "",
@@ -3794,6 +4309,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-3800",
+        "number": "MD60128846",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "packet_ready_date": "2026-03-12",
     "used_verifications": [
       "VR-3800",
@@ -3815,6 +4339,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-3900",
+        "outcome": "confirmed",
         "declared": {
           "from": "2002-08-26",
           "to": "2006-06-30",
@@ -3831,6 +4356,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-3901",
+        "outcome": "confirmed",
         "declared": {
           "from": "2006-07-01",
           "to": "2009-06-30",
@@ -3847,6 +4373,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-3902",
+        "outcome": "confirmed",
         "declared": {
           "from": "2009-07-13",
           "to": "2021-03-31",
@@ -3863,6 +4390,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-3903",
+        "outcome": "confirmed",
         "declared": {
           "from": "2021-07-05",
           "to": "",
@@ -3906,6 +4434,15 @@
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
     ],
+    "licences": [
+      {
+        "declaration_id": "DEC-3900",
+        "number": "MD60081193",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "ACTIVE"
+      }
+    ],
     "packet_ready_date": "2026-03-12",
     "used_verifications": [
       "VR-3900",
@@ -3928,6 +4465,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-4000",
+        "outcome": "confirmed",
         "declared": {
           "from": "2004-08-23",
           "to": "2008-06-30",
@@ -3944,6 +4482,7 @@
         "element": "education",
         "required": true,
         "reply_id": "VR-4001",
+        "outcome": "confirmed",
         "declared": {
           "from": "2008-07-01",
           "to": "2011-06-30",
@@ -3960,6 +4499,7 @@
         "element": "experience",
         "required": true,
         "reply_id": "VR-4002",
+        "outcome": "confirmed",
         "declared": {
           "from": "2011-07-11",
           "to": "",
@@ -3993,6 +4533,15 @@
     "unsupported": [],
     "limitations": [
       "Application signature/date and referee working addresses are not assessable from exported columns; office confirmation retained in queue."
+    ],
+    "licences": [
+      {
+        "declaration_id": "DEC-4000",
+        "number": "MD60096330",
+        "jurisdiction": "WA",
+        "lookup_date": "2026-04-16",
+        "status": "EXPIRED"
+      }
     ],
     "packet_ready_date": null,
     "used_verifications": [

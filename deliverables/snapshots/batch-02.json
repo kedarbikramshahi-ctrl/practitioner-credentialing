@@ -1,9 +1,9 @@
 {
   "schema_version": "credentialing-snapshot/1",
-  "snapshot_id": "f9cc8217-31f9-4cfe-8ff7-7ff3b24b9769",
+  "snapshot_id": "253d3866-3a5d-4b9c-ba49-088fb000ca58",
   "predecessor": {
     "path": "deliverables/snapshots/batch-01.json",
-    "sha256": "41c7add1d02830c638aff1b3d67610b8945554d02c96189561916ae9b5a6b96e"
+    "sha256": "d36abc07b7dc850fed1a0c80cc550c56f0ec49556a27083c92497110f6968f7a"
   },
   "batch": 2,
   "as_of": "2026-04-20",
@@ -73,10 +73,10 @@
     "deliverables/audit/batch-02.json",
     "deliverables/results/batch-02.json",
     "deliverables/run-log.md",
-    "deliverables/superseded/ee36f03b-2e39-424c-9112-32f577e60831/snapshots-batch-02.json",
-    "deliverables/superseded/ee36f03b-2e39-424c-9112-32f577e60831/state-batch-02.json",
-    "deliverables/superseded/ee36f03b-2e39-424c-9112-32f577e60831/audit-batch-02.json",
-    "deliverables/superseded/ee36f03b-2e39-424c-9112-32f577e60831/results-batch-02.json"
+    "deliverables/superseded/f9cc8217-31f9-4cfe-8ff7-7ff3b24b9769/snapshots-batch-02.json",
+    "deliverables/superseded/f9cc8217-31f9-4cfe-8ff7-7ff3b24b9769/state-batch-02.json",
+    "deliverables/superseded/f9cc8217-31f9-4cfe-8ff7-7ff3b24b9769/audit-batch-02.json",
+    "deliverables/superseded/f9cc8217-31f9-4cfe-8ff7-7ff3b24b9769/results-batch-02.json"
   ],
   "rules_file": "deliverables/rules.md",
   "applications": [
@@ -888,7 +888,7 @@
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-2000 (Steadmere University School of Medicine); 4 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-2000 (Steadmere University School of Medicine); 4 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         },
@@ -924,11 +924,6 @@
       "action_queue": [
         {
           "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
-          "owner": "Medical Services Professional",
-          "due": null
-        },
-        {
-          "item": "Reply VR-2104 does not settle ENT-2100: source, usability window or changed entry requires review; retain the reply and obtain admissible evidence.",
           "owner": "Medical Services Professional",
           "due": null
         },
@@ -978,7 +973,7 @@
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-2201 (Westmarch University Medical Center); 4 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-2201 (Westmarch University Medical Center); 4 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         },
@@ -1053,7 +1048,7 @@
           "due": null
         },
         {
-          "item": "Reference REF-2401 does not count: relative, spouse or partner; obtain a qualifying current reference.",
+          "item": "Reference REF-2401 does not count: relative, spouse or partner box is Yes or unanswered; obtain a qualifying current reference.",
           "owner": "Applicant",
           "due": null
         }
@@ -1249,7 +1244,7 @@
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-3090 (Two Rivers Health Partners); 1 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-3090 (Two Rivers Health Partners); 1 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         }
@@ -1351,7 +1346,7 @@
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-3303 (Willowmere Health Cooperative); 3 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-3303 (Willowmere Health Cooperative); 3 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         },
@@ -1484,7 +1479,7 @@
           "due": null
         },
         {
-          "item": "Obtain direct admissible verification for ENT-3602 (Silverbeck Physicians Group); 2 attempts retained.",
+          "item": "Obtain direct admissible confirmation for ENT-3602 (Silverbeck Physicians Group); 2 attempts retained.",
           "owner": "Medical Services Professional",
           "due": null
         },

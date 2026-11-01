@@ -13,6 +13,7 @@ export function validateSnapshot(snapshot) {
     if(a.decisions.some(d=>d.admitted && d.reason!==null))throw new Error('Admitted decision carries refusal reason');
     if(new Set(a.decisions.map(d=>d.decision_id)).size!==a.decisions.length)throw new Error('Duplicate decision identifier');
     if(a.activation?.active_at_export && a.activation.effective_date>snapshot.as_of)throw new Error('Premature activation');
+    if(a.activation?.active_at_export && a.activation.cycle_end<snapshot.as_of)throw new Error('Activation after appointment cycle');
     if(['withdrawn','discontinued'].includes(a.status) && a.activation)throw new Error('Terminal file activated');
   }
   return snapshot;

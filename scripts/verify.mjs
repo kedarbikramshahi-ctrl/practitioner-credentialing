@@ -2,6 +2,9 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {readJSON,sha} from './evidence.mjs';
 import {validateSnapshot} from './validation.mjs';
+import {assertNoTransaction} from './transaction.mjs';
+
+assertNoTransaction('deliverables');
 
 for(let n=1;n<=3;n++) {
   const name=`batch-${String(n).padStart(2,'0')}`;
@@ -30,3 +33,4 @@ for(let n=1;n<=3;n++) {
   assert.equal(snapshot.applications.length,new Set(state.records.applications.map(a=>a.application_id)).size);
   console.log(`${name}: schema, chain, evidence hashes, caseload and retained decision history valid (${snapshot.applications.length} applications)`);
 }
+assertNoTransaction('deliverables');

@@ -1,0 +1,34 @@
+{
+  "cli_version": "0.11.5",
+  "checkpoint_id": "01M6AWHMVW84EP1S55KPYPVZNF",
+  "strategy": "manual-commit",
+  "branch": "main",
+  "checkpoints_count": 2,
+  "files_touched": [
+    "README.md",
+    "SKILL.md",
+    "deliverables/rules.md",
+    "deliverables/verification.md",
+    "references/accepted-sources.json",
+    "scripts/credential.mjs",
+    "scripts/engine.mjs",
+    "scripts/sources.mjs",
+    "tests/sources.test.mjs"
+  ],
+  "sessions": [
+    {
+      "metadata": "/0/metadata.json",
+      "transcript": "/0/full.jsonl",
+      "compact_transcript": "/0/transcript.jsonl",
+      "content_hash": "/0/content_hash.txt",
+      "prompt": "/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 52237,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 9555584,
+    "output_tokens": 42034,
+    "api_call_count": 28
+  }
+}

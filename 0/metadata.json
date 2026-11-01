@@ -1,0 +1,36 @@
+{
+  "cli_version": "0.11.5",
+  "checkpoint_id": "01M6AWHMVW84EP1S55KPYPVZNF",
+  "session_id": "01a19518-9b5f-7691-a44b-d9df9331eb23",
+  "strategy": "manual-commit",
+  "created_at": "2026-11-01T06:25:34.2297456Z",
+  "branch": "main",
+  "checkpoints_count": 2,
+  "files_touched": [
+    "README.md",
+    "SKILL.md",
+    "deliverables/rules.md",
+    "deliverables/verification.md",
+    "references/accepted-sources.json",
+    "scripts/credential.mjs",
+    "scripts/engine.mjs",
+    "scripts/sources.mjs",
+    "tests/sources.test.mjs"
+  ],
+  "agent": "Codex",
+  "model": "gpt-6.1-sol",
+  "turn_id": "87c0b336969a",
+  "checkpoint_transcript_start": 1373,
+  "transcript_lines_at_start": 1373,
+  "compact_transcript_start": 164,
+  "token_usage": {
+    "input_tokens": 52237,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 9555584,
+    "output_tokens": 42034,
+    "api_call_count": 28
+  },
+  "session_metrics": {
+    "turn_count": 11
+  }
+}

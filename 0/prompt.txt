@@ -1,0 +1,24 @@
+Perform a final read-only review of commit 460f494ffb5769673452c5500c19c30088c984b5 against every assignment requirement.
+
+Verify the six fixes, test results, all three snapshots and predecessor hashes, preserved superseded artifacts, human decision queues, required deliverables, and unchanged original interview and schema. Confirm the actual Entire checkpoint belongs to this commit and session.
+
+Report any remaining blockers first. If none remain, provide the repository URL, full commit SHA, checkpoint references, snapshot paths, and exact proposed commands to publish code and capture.
+
+Do not modify files, create commits, attach sessions, or push. Wait for my explicit approval before publishing anything.
+
+---
+
+Fix both source-admissibility blockers using the office’s accepted-source table:
+
+1. Verify that secondary education evidence comes from the applicant’s most recent affiliation’s medical staff office, with all required conditions satisfied.
+2. Verify certification evidence against the issuing board or an explicitly accepted equivalent source.
+
+Add regression tests for unrelated sources and valid accepted sources. Review the remaining source checks against the closed source table for similar gaps.
+
+Run the full test suite and verification. Preserve sealed artifacts and regenerate affected snapshot successors if needed. Update the rules, verification report, and run log as appropriate.
+
+Commit locally and verify the actual Entire checkpoint. Preserve the original interview and schema unchanged. Stop on actual capture failure. Do not push without my approval.
+
+---
+
+Fix both source-admissibility blockers using the office’s accepted-source table:

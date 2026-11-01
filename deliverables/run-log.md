@@ -1,0 +1,75 @@
+# Credentialing run log
+
+Actual attempts; business dates come from each export, runtime timestamps do not.
+
+## 2026-11-01T05:08:20.808Z — batch 1: supported
+
+Command: `node scripts/credential.mjs --batch inputs/batch-01 --number 1`. Export clock: 2026-03-16.
+
+Consumed: applications.csv, application-disclosures.csv, declared-history.csv, declared-credentials.csv, privilege-requests.csv, licence-lookup-wa.csv, licence-lookup-other-states.csv, certification-replies.csv, verification-replies.csv, verification-attempts.csv, peer-referees.csv, peer-reference-replies.csv, correspondence.csv.
+
+Documents opened: letters/2026-02-06_gap-explanation_APP-2026-005.md, letters/2026-02-06_gap-explanation_APP-2026-039.md, letters/2026-02-13_gap-explanation_APP-2026-017.md, letters/2026-02-18_missing-items_APP-2026-019.md, letters/2026-02-20_cover-note_APP-2026-031.md, letters/2026-03-04_board-action_APP-2026-015.md, letters/2026-03-06_return-incomplete_APP-2026-018.md, letters/2026-03-06_missing-licence_APP-2026-031.md, decisions/2026-03-10_MEC-2026-011.md, decisions/2026-03-10_MEC-2026-017.md, decisions/2026-03-10_MEC-2026-024.md, letters/2026-03-10_discrepancy_APP-2026-030.md, decisions/2026-03-10_MEC-2026-034.md, decisions/2026-03-12_MEC-2026-013.md, decisions/2026-03-12_MEC-2026-023.md.
+
+Wrote: deliverables/snapshots/batch-01.json, deliverables/state/batch-01.json, deliverables/audit/batch-01.json, deliverables/results/batch-01.json, deliverables/run-log.md.
+
+First retained occurrence. Computed 40 applications; unresolved business work is owned in each queue. No run failures.
+
+## 2026-11-01T05:08:22.073Z — batch 2: supported
+
+Command: `node scripts/credential.mjs --batch inputs/batch-02 --number 2 --previous deliverables/state/batch-01.json`. Export clock: 2026-04-20.
+
+Consumed: applications.csv, application-disclosures.csv, declared-history.csv, declared-credentials.csv, privilege-requests.csv, licence-lookup-wa.csv, licence-lookup-other-states.csv, certification-replies.csv, verification-replies.csv, verification-attempts.csv, peer-referees.csv, peer-reference-replies.csv, correspondence.csv.
+
+Documents opened: decisions/2026-03-17_MEC-2026-012.md, decisions/2026-03-17_MEC-2026-035.md, decisions/2026-03-19_MEC-2026-015.md, decisions/2026-03-19_MEC-2026-033.md, decisions/2026-03-24_MEC-2026-014.md, decisions/2026-03-24_MEC-2026-025.md, decisions/2026-03-26_MEC-2026-016.md, decisions/2026-03-26_MEC-2026-032.md, decisions/2026-03-26_MEC-2026-037.md, letters/2026-03-30_gap-explanation_APP-2026-018.md, decisions/2026-03-31_MEC-2026-018.md, dispositions/2026-03-31_disposition_APP-2026-029.md, decisions/2026-04-02_MEC-2026-019.md, letters/2026-04-02_confirm-disclosure_APP-2026-015.md, dispositions/2026-04-02_disposition_APP-2026-017.md, decisions/2026-04-02_MEC-2026-029.md, letters/2026-04-02_discontinued_APP-2026-029.md, dispositions/2026-04-02_disposition_APP-2026-032.md, letters/2026-04-06_withdrawal_APP-2026-028.md, decisions/2026-04-07_MEC-2026-020.md, dispositions/2026-04-08_disposition_APP-2026-027.md, decisions/2026-04-09_MEC-2026-021.md, letters/2026-04-09_referee-ineligible_APP-2026-024.md, letters/2026-04-10_certification-lapsed_APP-2026-027.md, decisions/2026-04-14_GBD-2026-011.md, decisions/2026-04-14_GBD-2026-013.md, decisions/2026-04-14_GBD-2026-017.md, decisions/2026-04-14_MEC-2026-022.md, decisions/2026-04-14_GBD-2026-023.md, decisions/2026-04-14_GBD-2026-024.md, decisions/2026-04-14_MEC-2026-026.md, decisions/2026-04-14_GBD-2026-032.md, decisions/2026-04-14_GBD-2026-033.md, decisions/2026-04-14_GBD-2026-034.md, decisions/2026-04-14_GBD-2026-036.md, decisions/2026-04-14_MEC-2026-036.md, decisions/2026-04-14_GBD-2026-039.md, letters/2026-04-15_referee-overdue_APP-2026-023.md, decisions/2026-04-16_MEC-2026-030.md, decisions/2026-04-16_MEC-2026-031.md, letters/2026-04-16_deferral-chase_APP-2026-034.md.
+
+Wrote: deliverables/snapshots/batch-02.json, deliverables/state/batch-02.json, deliverables/audit/batch-02.json, deliverables/results/batch-02.json, deliverables/run-log.md.
+
+First retained occurrence. Computed 40 applications; unresolved business work is owned in each queue. No run failures.
+
+## 2026-11-01T05:08:22.991Z — batch 3: supported
+
+Command: `node scripts/credential.mjs --batch inputs/batch-03 --number 3 --previous deliverables/state/batch-02.json`. Export clock: 2026-05-18.
+
+Consumed: applications.csv, application-disclosures.csv, declared-history.csv, declared-credentials.csv, privilege-requests.csv, licence-lookup-wa.csv, licence-lookup-other-states.csv, certification-replies.csv, verification-replies.csv, verification-attempts.csv, peer-referees.csv, peer-reference-replies.csv, correspondence.csv.
+
+Documents opened: letters/2026-04-20_confirm-disclosure-reply_APP-2026-015.md, decisions/2026-04-21_MEC-2026-028.md, letters/2026-04-23_referee-substitution_APP-2026-023.md, letters/2026-04-24_referee-substitution_APP-2026-034.md, decisions/2026-05-05_MEC-2026-027.md, dispositions/2026-05-06_disposition_APP-2026-015.md, decisions/2026-05-12_GBD-2026-012.md, decisions/2026-05-12_GBD-2026-014.md, decisions/2026-05-12_GBD-2026-015.md, decisions/2026-05-12_GBD-2026-016.md, decisions/2026-05-12_GBD-2026-018.md, decisions/2026-05-12_GBD-2026-019.md, decisions/2026-05-12_GBD-2026-020.md, decisions/2026-05-12_GBD-2026-021.md, decisions/2026-05-12_GBD-2026-022.md, decisions/2026-05-12_GBD-2026-025.md, decisions/2026-05-12_GBD-2026-026.md, decisions/2026-05-12_GBD-2026-027.md, decisions/2026-05-12_GBD-2026-028.md, decisions/2026-05-12_GBD-2026-029.md, decisions/2026-05-12_GBD-2026-030.md, decisions/2026-05-12_GBD-2026-031.md, decisions/2026-05-12_GBD-2026-035.md, decisions/2026-05-12_GBD-2026-037.md, decisions/2026-05-12_GBD-2026-038.md, letters/2026-05-14_reference-stale_APP-2026-025.md.
+
+Wrote: deliverables/snapshots/batch-03.json, deliverables/state/batch-03.json, deliverables/audit/batch-03.json, deliverables/results/batch-03.json, deliverables/run-log.md.
+
+First retained occurrence. Computed 40 applications; unresolved business work is owned in each queue. No run failures.
+
+## 2026-11-01T05:11:11.103Z — batch 1: supported
+
+Command: `node scripts/credential.mjs --batch inputs/batch-01 --number 1`. Export clock: 2026-03-16.
+
+Consumed: applications.csv, application-disclosures.csv, declared-history.csv, declared-credentials.csv, privilege-requests.csv, licence-lookup-wa.csv, licence-lookup-other-states.csv, certification-replies.csv, verification-replies.csv, verification-attempts.csv, peer-referees.csv, peer-reference-replies.csv, correspondence.csv.
+
+Documents opened: letters/2026-02-06_gap-explanation_APP-2026-005.md, letters/2026-02-06_gap-explanation_APP-2026-039.md, letters/2026-02-13_gap-explanation_APP-2026-017.md, letters/2026-02-18_missing-items_APP-2026-019.md, letters/2026-02-20_cover-note_APP-2026-031.md, letters/2026-03-04_board-action_APP-2026-015.md, letters/2026-03-06_return-incomplete_APP-2026-018.md, letters/2026-03-06_missing-licence_APP-2026-031.md, decisions/2026-03-10_MEC-2026-011.md, decisions/2026-03-10_MEC-2026-017.md, decisions/2026-03-10_MEC-2026-024.md, letters/2026-03-10_discrepancy_APP-2026-030.md, decisions/2026-03-10_MEC-2026-034.md, decisions/2026-03-12_MEC-2026-013.md, decisions/2026-03-12_MEC-2026-023.md.
+
+Wrote: deliverables/snapshots/batch-01.json, deliverables/state/batch-01.json, deliverables/audit/batch-01.json, deliverables/results/batch-01.json, deliverables/run-log.md, deliverables/superseded/56dc9369-d421-4f04-a75a-e8afceee7d96/snapshots-batch-01.json, deliverables/superseded/56dc9369-d421-4f04-a75a-e8afceee7d96/state-batch-01.json, deliverables/superseded/56dc9369-d421-4f04-a75a-e8afceee7d96/audit-batch-01.json, deliverables/superseded/56dc9369-d421-4f04-a75a-e8afceee7d96/results-batch-01.json.
+
+Superseded earlier occurrence because input, predecessor, policy or implementation changed; original bytes retained at deliverables/superseded/56dc9369-d421-4f04-a75a-e8afceee7d96/snapshots-batch-01.json, deliverables/superseded/56dc9369-d421-4f04-a75a-e8afceee7d96/state-batch-01.json, deliverables/superseded/56dc9369-d421-4f04-a75a-e8afceee7d96/audit-batch-01.json, deliverables/superseded/56dc9369-d421-4f04-a75a-e8afceee7d96/results-batch-01.json. Retained 40 applications; unresolved business work is owned in each queue. No run failures.
+
+## 2026-11-01T05:11:11.993Z — batch 2: supported
+
+Command: `node scripts/credential.mjs --batch inputs/batch-02 --number 2 --previous deliverables/state/batch-01.json`. Export clock: 2026-04-20.
+
+Consumed: applications.csv, application-disclosures.csv, declared-history.csv, declared-credentials.csv, privilege-requests.csv, licence-lookup-wa.csv, licence-lookup-other-states.csv, certification-replies.csv, verification-replies.csv, verification-attempts.csv, peer-referees.csv, peer-reference-replies.csv, correspondence.csv.
+
+Documents opened: decisions/2026-03-17_MEC-2026-012.md, decisions/2026-03-17_MEC-2026-035.md, decisions/2026-03-19_MEC-2026-015.md, decisions/2026-03-19_MEC-2026-033.md, decisions/2026-03-24_MEC-2026-014.md, decisions/2026-03-24_MEC-2026-025.md, decisions/2026-03-26_MEC-2026-016.md, decisions/2026-03-26_MEC-2026-032.md, decisions/2026-03-26_MEC-2026-037.md, letters/2026-03-30_gap-explanation_APP-2026-018.md, decisions/2026-03-31_MEC-2026-018.md, dispositions/2026-03-31_disposition_APP-2026-029.md, decisions/2026-04-02_MEC-2026-019.md, letters/2026-04-02_confirm-disclosure_APP-2026-015.md, dispositions/2026-04-02_disposition_APP-2026-017.md, decisions/2026-04-02_MEC-2026-029.md, letters/2026-04-02_discontinued_APP-2026-029.md, dispositions/2026-04-02_disposition_APP-2026-032.md, letters/2026-04-06_withdrawal_APP-2026-028.md, decisions/2026-04-07_MEC-2026-020.md, dispositions/2026-04-08_disposition_APP-2026-027.md, decisions/2026-04-09_MEC-2026-021.md, letters/2026-04-09_referee-ineligible_APP-2026-024.md, letters/2026-04-10_certification-lapsed_APP-2026-027.md, decisions/2026-04-14_GBD-2026-011.md, decisions/2026-04-14_GBD-2026-013.md, decisions/2026-04-14_GBD-2026-017.md, decisions/2026-04-14_MEC-2026-022.md, decisions/2026-04-14_GBD-2026-023.md, decisions/2026-04-14_GBD-2026-024.md, decisions/2026-04-14_MEC-2026-026.md, decisions/2026-04-14_GBD-2026-032.md, decisions/2026-04-14_GBD-2026-033.md, decisions/2026-04-14_GBD-2026-034.md, decisions/2026-04-14_GBD-2026-036.md, decisions/2026-04-14_MEC-2026-036.md, decisions/2026-04-14_GBD-2026-039.md, letters/2026-04-15_referee-overdue_APP-2026-023.md, decisions/2026-04-16_MEC-2026-030.md, decisions/2026-04-16_MEC-2026-031.md, letters/2026-04-16_deferral-chase_APP-2026-034.md.
+
+Wrote: deliverables/snapshots/batch-02.json, deliverables/state/batch-02.json, deliverables/audit/batch-02.json, deliverables/results/batch-02.json, deliverables/run-log.md, deliverables/superseded/ee36f03b-2e39-424c-9112-32f577e60831/snapshots-batch-02.json, deliverables/superseded/ee36f03b-2e39-424c-9112-32f577e60831/state-batch-02.json, deliverables/superseded/ee36f03b-2e39-424c-9112-32f577e60831/audit-batch-02.json, deliverables/superseded/ee36f03b-2e39-424c-9112-32f577e60831/results-batch-02.json.
+
+Superseded earlier occurrence because input, predecessor, policy or implementation changed; original bytes retained at deliverables/superseded/ee36f03b-2e39-424c-9112-32f577e60831/snapshots-batch-02.json, deliverables/superseded/ee36f03b-2e39-424c-9112-32f577e60831/state-batch-02.json, deliverables/superseded/ee36f03b-2e39-424c-9112-32f577e60831/audit-batch-02.json, deliverables/superseded/ee36f03b-2e39-424c-9112-32f577e60831/results-batch-02.json. Retained 40 applications; unresolved business work is owned in each queue. No run failures.
+
+## 2026-11-01T05:11:12.588Z — batch 3: supported
+
+Command: `node scripts/credential.mjs --batch inputs/batch-03 --number 3 --previous deliverables/state/batch-02.json`. Export clock: 2026-05-18.
+
+Consumed: applications.csv, application-disclosures.csv, declared-history.csv, declared-credentials.csv, privilege-requests.csv, licence-lookup-wa.csv, licence-lookup-other-states.csv, certification-replies.csv, verification-replies.csv, verification-attempts.csv, peer-referees.csv, peer-reference-replies.csv, correspondence.csv.
+
+Documents opened: letters/2026-04-20_confirm-disclosure-reply_APP-2026-015.md, decisions/2026-04-21_MEC-2026-028.md, letters/2026-04-23_referee-substitution_APP-2026-023.md, letters/2026-04-24_referee-substitution_APP-2026-034.md, decisions/2026-05-05_MEC-2026-027.md, dispositions/2026-05-06_disposition_APP-2026-015.md, decisions/2026-05-12_GBD-2026-012.md, decisions/2026-05-12_GBD-2026-014.md, decisions/2026-05-12_GBD-2026-015.md, decisions/2026-05-12_GBD-2026-016.md, decisions/2026-05-12_GBD-2026-018.md, decisions/2026-05-12_GBD-2026-019.md, decisions/2026-05-12_GBD-2026-020.md, decisions/2026-05-12_GBD-2026-021.md, decisions/2026-05-12_GBD-2026-022.md, decisions/2026-05-12_GBD-2026-025.md, decisions/2026-05-12_GBD-2026-026.md, decisions/2026-05-12_GBD-2026-027.md, decisions/2026-05-12_GBD-2026-028.md, decisions/2026-05-12_GBD-2026-029.md, decisions/2026-05-12_GBD-2026-030.md, decisions/2026-05-12_GBD-2026-031.md, decisions/2026-05-12_GBD-2026-035.md, decisions/2026-05-12_GBD-2026-037.md, decisions/2026-05-12_GBD-2026-038.md, letters/2026-05-14_reference-stale_APP-2026-025.md.
+
+Wrote: deliverables/snapshots/batch-03.json, deliverables/state/batch-03.json, deliverables/audit/batch-03.json, deliverables/results/batch-03.json, deliverables/run-log.md, deliverables/superseded/6361a097-36e2-457e-b4dc-3c355de3f3c9/snapshots-batch-03.json, deliverables/superseded/6361a097-36e2-457e-b4dc-3c355de3f3c9/state-batch-03.json, deliverables/superseded/6361a097-36e2-457e-b4dc-3c355de3f3c9/audit-batch-03.json, deliverables/superseded/6361a097-36e2-457e-b4dc-3c355de3f3c9/results-batch-03.json.
+
+Superseded earlier occurrence because input, predecessor, policy or implementation changed; original bytes retained at deliverables/superseded/6361a097-36e2-457e-b4dc-3c355de3f3c9/snapshots-batch-03.json, deliverables/superseded/6361a097-36e2-457e-b4dc-3c355de3f3c9/state-batch-03.json, deliverables/superseded/6361a097-36e2-457e-b4dc-3c355de3f3c9/audit-batch-03.json, deliverables/superseded/6361a097-36e2-457e-b4dc-3c355de3f3c9/results-batch-03.json. Retained 40 applications; unresolved business work is owned in each queue. No run failures.

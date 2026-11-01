@@ -1,0 +1,30 @@
+{
+  "version": "LARK-PRIV-2026.1",
+  "sources": ["procedure.md §1–11", "privilege-criteria.md rules 1–7", "authority-roster.md", "attester-table.md"],
+  "authority": [
+    {"name":"Dr. Marguerite Oyelaran, MD","role":"Clinical Director","body":"Clinical Director","from":"2025-07-01","to":"2027-06-30"},
+    {"name":"Ms. Corinne Batiste","role":"Chair, Governing Body","body":"Governing Body","from":"2025-01-01","to":"2027-12-31"},
+    {"name":"Mr. Desmond Ihejirika","role":"Vice-Chair, Governing Body","body":"Governing Body","from":"2026-01-05","to":"2026-12-31"},
+    {"name":"Dr. Peter Vandermolen, MD","role":"Chair, Executive Committee of the Medical Staff","body":"Executive Committee of the Medical Staff","from":"2026-01-01","to":"2027-12-31"},
+    {"name":"Dr. Anneke Thorvald, MD","role":"Chair, Credentials Committee","body":"Credentials Committee","from":"2025-07-01","to":"2027-06-30"}
+  ],
+  "outcomes": {
+    "Credentials Committee":["recommended","not recommended","deferred-pending-information"],
+    "Executive Committee of the Medical Staff":["recommended","not recommended","deferred-pending-information"],
+    "Governing Body":["approved","approved-with-conditions","deferred-pending-information","denied"]
+  },
+  "privileges": {
+    "PRIV-FM":{"certs":[["ABFM","Family Medicine"],["AOBFP","Family Practice"]],"training":[{"type":"residency","specialty":"Family Medicine","months":36}],"eligible":true},
+    "PRIV-IM":{"certs":[["ABIM","Internal Medicine"],["AOBIM","Internal Medicine"]],"training":[{"type":"residency","specialty":"Internal Medicine","months":36}],"eligible":true},
+    "PRIV-HOSP":{"certs":[["ABIM","Internal Medicine"],["ABIM","Internal Medicine with Focused Practice in Hospital Medicine"],["ABFM","Family Medicine"],["AOBIM","Internal Medicine"]],"training":[{"type":"residency","specialty":"Internal Medicine|Family Medicine","months":36}],"eligible":true},
+    "PRIV-CARD":{"certs":[["ABIM","Cardiovascular Disease"],["AOBIM","Cardiology"]],"training":[{"type":"residency","specialty":"Internal Medicine","months":36},{"type":"fellowship","specialty":"Cardiovascular Disease|Cardiology","months":36}],"eligible":false},
+    "PRIV-EM":{"certs":[["ABEM","Emergency Medicine"],["AOBEM","Emergency Medicine"]],"training":[{"type":"residency","specialty":"Emergency Medicine","months":36}],"eligible":false},
+    "PRIV-GS":{"certs":[["ABS","Surgery"],["AOBS","General Surgery"]],"training":[{"type":"residency","specialty":"General Surgery","months":60}],"eligible":false},
+    "PRIV-OBG":{"certs":[["ABOG","Obstetrics and Gynecology"],["AOBOG","Obstetrics and Gynecology"]],"training":[{"type":"residency","specialty":"Obstetrics and Gynecology","months":48}],"eligible":false},
+    "PRIV-PED":{"certs":[["ABP","Pediatrics"],["AOBP","Pediatrics"]],"training":[{"type":"residency","specialty":"Pediatrics","months":36}],"eligible":true},
+    "PRIV-ANES":{"certs":[["ABA","Anesthesiology"],["AOBA","Anesthesiology"]],"training":[{"type":"residency","specialty":"Anesthesiology","months":48}],"eligible":false},
+    "PRIV-RAD":{"certs":[["ABR","Diagnostic Radiology"],["AOBR","Diagnostic Radiology"]],"training":[{"type":"residency","specialty":"Diagnostic Radiology","months":48}],"eligible":false},
+    "PRIV-PSY":{"certs":[["ABPN","Psychiatry"],["AOBNP","Psychiatry"]],"training":[{"type":"residency","specialty":"Psychiatry","months":48}],"eligible":false},
+    "PRIV-ORTHO":{"certs":[["ABOS","Orthopaedic Surgery"],["AOBOS","Orthopedic Surgery"]],"training":[{"type":"residency","specialty":"Orthopaedic Surgery|Orthopedic Surgery","months":60}],"eligible":false}
+  }
+}

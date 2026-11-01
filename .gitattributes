@@ -1,0 +1,5 @@
+/inputs/** -text
+/deliverables/** -text
+/references/** -text
+/scripts/** text eol=lf
+/tests/** text eol=lf

@@ -1,0 +1,1702 @@
+{
+  "schema_version": "credentialing-snapshot/1",
+  "snapshot_id": "56dc9369-d421-4f04-a75a-e8afceee7d96",
+  "predecessor": null,
+  "batch": 1,
+  "as_of": "2026-03-16",
+  "consumed": {
+    "record_files": [
+      "applications.csv",
+      "application-disclosures.csv",
+      "declared-history.csv",
+      "declared-credentials.csv",
+      "privilege-requests.csv",
+      "licence-lookup-wa.csv",
+      "licence-lookup-other-states.csv",
+      "certification-replies.csv",
+      "verification-replies.csv",
+      "verification-attempts.csv",
+      "peer-referees.csv",
+      "peer-reference-replies.csv",
+      "correspondence.csv"
+    ],
+    "documents": [
+      "letters/2026-02-06_gap-explanation_APP-2026-005.md",
+      "letters/2026-02-06_gap-explanation_APP-2026-039.md",
+      "letters/2026-02-13_gap-explanation_APP-2026-017.md",
+      "letters/2026-02-18_missing-items_APP-2026-019.md",
+      "letters/2026-02-20_cover-note_APP-2026-031.md",
+      "letters/2026-03-04_board-action_APP-2026-015.md",
+      "letters/2026-03-06_return-incomplete_APP-2026-018.md",
+      "letters/2026-03-06_missing-licence_APP-2026-031.md",
+      "decisions/2026-03-10_MEC-2026-011.md",
+      "decisions/2026-03-10_MEC-2026-017.md",
+      "decisions/2026-03-10_MEC-2026-024.md",
+      "letters/2026-03-10_discrepancy_APP-2026-030.md",
+      "decisions/2026-03-10_MEC-2026-034.md",
+      "decisions/2026-03-12_MEC-2026-013.md",
+      "decisions/2026-03-12_MEC-2026-023.md"
+    ]
+  },
+  "produced": [
+    "deliverables/snapshots/batch-01.json",
+    "deliverables/state/batch-01.json",
+    "deliverables/audit/batch-01.json",
+    "deliverables/results/batch-01.json",
+    "deliverables/run-log.md"
+  ],
+  "rules_file": "deliverables/rules.md",
+  "applications": [
+    {
+      "application_id": "APP-2026-001",
+      "revision": 1,
+      "status": "packet-presentable",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "education": "resolved",
+        "certification": "resolved",
+        "references": "resolved"
+      },
+      "packet_presentable": true,
+      "decisions": [
+        {
+          "decision_id": "MEC-2026-011",
+          "admitted": true,
+          "reason": null
+        }
+      ],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Present the revision-bound packet to the Executive Committee for recommendation and the Governing Body for its decision; the Skill cannot decide either.",
+          "owner": "Executive Committee of the Medical Staff / Governing Body",
+          "due": null
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-002",
+      "revision": 1,
+      "status": "packet-presentable",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "education": "resolved",
+        "certification": "resolved",
+        "references": "resolved"
+      },
+      "packet_presentable": true,
+      "decisions": [],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Present the revision-bound packet to the Executive Committee for recommendation and the Governing Body for its decision; the Skill cannot decide either.",
+          "owner": "Executive Committee of the Medical Staff / Governing Body",
+          "due": null
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-003",
+      "revision": 1,
+      "status": "packet-presentable",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "education": "resolved",
+        "certification": "resolved",
+        "references": "resolved"
+      },
+      "packet_presentable": true,
+      "decisions": [
+        {
+          "decision_id": "MEC-2026-013",
+          "admitted": true,
+          "reason": null
+        }
+      ],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Present the revision-bound packet to the Executive Committee for recommendation and the Governing Body for its decision; the Skill cannot decide either.",
+          "owner": "Executive Committee of the Medical Staff / Governing Body",
+          "due": null
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-004",
+      "revision": 1,
+      "status": "in-verification",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "outstanding",
+        "gaps": "resolved",
+        "education": "resolved",
+        "certification": "resolved",
+        "references": "resolved"
+      },
+      "packet_presentable": false,
+      "decisions": [],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Obtain direct admissible verification for ENT-0403 (Orchard Row Specialty Clinic); 1 attempts retained.",
+          "owner": "Medical Services Professional",
+          "due": null
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-005",
+      "revision": 1,
+      "status": "packet-presentable",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "education": "resolved",
+        "certification": "resolved",
+        "references": "resolved"
+      },
+      "packet_presentable": true,
+      "decisions": [],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Present the revision-bound packet to the Executive Committee for recommendation and the Governing Body for its decision; the Skill cannot decide either.",
+          "owner": "Executive Committee of the Medical Staff / Governing Body",
+          "due": null
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-006",
+      "revision": 1,
+      "status": "packet-presentable",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "education": "resolved",
+        "certification": "resolved",
+        "references": "resolved"
+      },
+      "packet_presentable": true,
+      "decisions": [],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Present the revision-bound packet to the Executive Committee for recommendation and the Governing Body for its decision; the Skill cannot decide either.",
+          "owner": "Executive Committee of the Medical Staff / Governing Body",
+          "due": null
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-007",
+      "revision": 1,
+      "status": "packet-presentable",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "education": "resolved",
+        "certification": "resolved",
+        "references": "resolved"
+      },
+      "packet_presentable": true,
+      "decisions": [
+        {
+          "decision_id": "MEC-2026-017",
+          "admitted": true,
+          "reason": null
+        }
+      ],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Present the revision-bound packet to the Executive Committee for recommendation and the Governing Body for its decision; the Skill cannot decide either.",
+          "owner": "Executive Committee of the Medical Staff / Governing Body",
+          "due": null
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-008",
+      "revision": 1,
+      "status": "in-verification",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "outstanding",
+        "gaps": "resolved",
+        "education": "resolved",
+        "certification": "resolved",
+        "references": "outstanding"
+      },
+      "packet_presentable": false,
+      "decisions": [],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Obtain direct admissible verification for ENT-0802 (Northsound Medical Group); 1 attempts retained.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Reference REF-0801 does not count: no reply; retain the unanswered request.",
+          "owner": "Medical Services Professional",
+          "due": "2026-04-28"
+        },
+        {
+          "item": "Send numbered reference request 2 for REF-0801, subject to signed release.",
+          "owner": "Medical Services Professional",
+          "due": "2026-03-16"
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-009",
+      "revision": 1,
+      "status": "in-verification",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "outstanding",
+        "gaps": "resolved",
+        "education": "resolved",
+        "certification": "resolved",
+        "references": "outstanding"
+      },
+      "packet_presentable": false,
+      "decisions": [],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Obtain direct admissible verification for ENT-0903 (Harrowgate Community Health); 1 attempts retained.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Reference REF-0901 does not count: no reply; retain the unanswered request.",
+          "owner": "Medical Services Professional",
+          "due": "2026-05-01"
+        },
+        {
+          "item": "Send numbered reference request 2 for REF-0901, subject to signed release.",
+          "owner": "Medical Services Professional",
+          "due": "2026-03-19"
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-010",
+      "revision": 1,
+      "status": "in-verification",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "outstanding",
+        "gaps": "resolved",
+        "education": "outstanding",
+        "certification": "eligibility-question",
+        "references": "outstanding"
+      },
+      "packet_presentable": false,
+      "decisions": [],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Obtain direct admissible verification for ENT-1001 (Pinevale University Hospital); 1 attempts retained.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Obtain direct admissible verification for ENT-1002 (Larkhollow Physicians Network); 1 attempts retained.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Record threshold eligibility disposition: nothing yet verified supports PRIV-PED. Do not discontinue automatically.",
+          "owner": "Clinical Director",
+          "due": null
+        },
+        {
+          "item": "Reference REF-1000 does not count: no reply; retain the unanswered request.",
+          "owner": "Medical Services Professional",
+          "due": "2026-05-05"
+        },
+        {
+          "item": "Send numbered reference request 2 for REF-1000, subject to signed release.",
+          "owner": "Medical Services Professional",
+          "due": "2026-03-23"
+        },
+        {
+          "item": "Reference REF-1001 does not count: no reply; retain the unanswered request.",
+          "owner": "Medical Services Professional",
+          "due": "2026-05-05"
+        },
+        {
+          "item": "Send numbered reference request 2 for REF-1001, subject to signed release.",
+          "owner": "Medical Services Professional",
+          "due": "2026-03-23"
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-011",
+      "revision": 1,
+      "status": "in-verification",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "outstanding",
+        "gaps": "resolved",
+        "education": "outstanding",
+        "certification": "eligibility-question",
+        "references": "outstanding"
+      },
+      "packet_presentable": false,
+      "decisions": [],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Obtain direct admissible verification for ENT-1101 (Tolliver General Hospital); 1 attempts retained.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Obtain direct admissible verification for ENT-1103 (Willowmere Health Cooperative); 1 attempts retained.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Verify all active and inactive certifications, including DEC-1101 (American Board of Surgery).",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Record threshold eligibility disposition: nothing yet verified supports PRIV-GS. Do not discontinue automatically.",
+          "owner": "Clinical Director",
+          "due": null
+        },
+        {
+          "item": "Reference REF-1100 does not count: no reply; retain the unanswered request.",
+          "owner": "Medical Services Professional",
+          "due": "2026-05-08"
+        },
+        {
+          "item": "Send numbered reference request 2 for REF-1100, subject to signed release.",
+          "owner": "Medical Services Professional",
+          "due": "2026-03-26"
+        },
+        {
+          "item": "Reference REF-1101 does not count: no reply; retain the unanswered request.",
+          "owner": "Medical Services Professional",
+          "due": "2026-05-08"
+        },
+        {
+          "item": "Send numbered reference request 2 for REF-1101, subject to signed release.",
+          "owner": "Medical Services Professional",
+          "due": "2026-03-26"
+        },
+        {
+          "item": "Reference REF-1102 does not count: no reply; retain the unanswered request.",
+          "owner": "Medical Services Professional",
+          "due": "2026-05-08"
+        },
+        {
+          "item": "Send numbered reference request 2 for REF-1102, subject to signed release.",
+          "owner": "Medical Services Professional",
+          "due": "2026-03-26"
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-012",
+      "revision": 1,
+      "status": "in-verification",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "outstanding",
+        "gaps": "resolved",
+        "education": "outstanding",
+        "certification": "eligibility-question",
+        "references": "outstanding"
+      },
+      "packet_presentable": false,
+      "decisions": [],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Obtain direct admissible verification for ENT-1200 (Halloway Point School of Medicine); 1 attempts retained.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Obtain direct admissible verification for ENT-1201 (Westmarch University Medical Center); 1 attempts retained.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Obtain direct admissible verification for ENT-1202 (Stonebridge Medical Associates); 1 attempts retained.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Obtain direct admissible verification for ENT-1203 (Northsound Medical Group); 1 attempts retained.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Verify all active and inactive certifications, including DEC-1201 (American Board of Internal Medicine).",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Record threshold eligibility disposition: nothing yet verified supports PRIV-IM. Do not discontinue automatically.",
+          "owner": "Clinical Director",
+          "due": null
+        },
+        {
+          "item": "Reference REF-1200 does not count: no reply; retain the unanswered request.",
+          "owner": "Medical Services Professional",
+          "due": "2026-05-12"
+        },
+        {
+          "item": "Send numbered reference request 2 for REF-1200, subject to signed release.",
+          "owner": "Medical Services Professional",
+          "due": "2026-03-30"
+        },
+        {
+          "item": "Reference REF-1201 does not count: no reply; retain the unanswered request.",
+          "owner": "Medical Services Professional",
+          "due": "2026-05-12"
+        },
+        {
+          "item": "Send numbered reference request 2 for REF-1201, subject to signed release.",
+          "owner": "Medical Services Professional",
+          "due": "2026-03-30"
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-013",
+      "revision": 1,
+      "status": "packet-presentable",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "education": "resolved",
+        "certification": "resolved",
+        "references": "resolved"
+      },
+      "packet_presentable": true,
+      "decisions": [
+        {
+          "decision_id": "MEC-2026-023",
+          "admitted": true,
+          "reason": null
+        }
+      ],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Present the revision-bound packet to the Executive Committee for recommendation and the Governing Body for its decision; the Skill cannot decide either.",
+          "owner": "Executive Committee of the Medical Staff / Governing Body",
+          "due": null
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-014",
+      "revision": 1,
+      "status": "decision-inadmissible",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "education": "resolved",
+        "certification": "resolved",
+        "references": "outstanding"
+      },
+      "packet_presentable": false,
+      "decisions": [
+        {
+          "decision_id": "MEC-2026-024",
+          "admitted": false,
+          "reason": "4: no presentable packet for this revision before the decision date"
+        }
+      ],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Reference REF-1401 does not count: no reply; retain the unanswered request.",
+          "owner": "Medical Services Professional",
+          "due": "2026-04-14"
+        },
+        {
+          "item": "Send numbered reference request 3 for REF-1401, subject to signed release.",
+          "owner": "Medical Services Professional",
+          "due": "2026-03-23"
+        },
+        {
+          "item": "Refused decision MEC-2026-024: 4: no presentable packet for this revision before the decision date; retain and raise to the Medical Services Professional.",
+          "owner": "Medical Services Professional",
+          "due": null
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-015",
+      "revision": 1,
+      "status": "in-verification",
+      "elements": {
+        "licensure": "finding",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "education": "resolved",
+        "certification": "resolved",
+        "references": "resolved"
+      },
+      "packet_presentable": false,
+      "decisions": [],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Present Washington restriction and board evidence MD60069441 to the Clinical Director, Executive Committee and Governing Body.",
+          "owner": "Clinical Director",
+          "due": null
+        },
+        {
+          "item": "Confirm PPQ-1 in writing: board action contradicts the declared No; do not choose an answer for the applicant.",
+          "owner": "Applicant",
+          "due": null
+        },
+        {
+          "item": "Record disposition on high-risk findings; provide disclosures and source evidence, then present to Executive Committee and Governing Body.",
+          "owner": "Clinical Director",
+          "due": null
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-016",
+      "revision": 1,
+      "status": "in-verification",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "outstanding",
+        "gaps": "resolved",
+        "education": "resolved",
+        "certification": "resolved",
+        "references": "resolved"
+      },
+      "packet_presentable": false,
+      "decisions": [],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Obtain direct admissible verification for ENT-1603 (Willowmere Health Cooperative); 1 attempts retained.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Obtain direct admissible verification for ENT-1604 (Harrowgate Community Health); 1 attempts retained.",
+          "owner": "Medical Services Professional",
+          "due": null
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-017",
+      "revision": 1,
+      "status": "in-verification",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "outstanding",
+        "gaps": "routed-to-clinical-director",
+        "education": "resolved",
+        "certification": "resolved",
+        "references": "resolved"
+      },
+      "packet_presentable": false,
+      "decisions": [],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Obtain direct admissible verification for ENT-1704 (Kettlebrook Family Clinic); 1 attempts retained.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Record a disposition on long gaps: 2019-04-01 to 2019-11-05 (219 days).",
+          "owner": "Clinical Director",
+          "due": null
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-018",
+      "revision": 1,
+      "status": "returned-incomplete",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "outstanding",
+        "gaps": "return-incomplete",
+        "education": "outstanding",
+        "certification": "eligibility-question",
+        "references": "outstanding"
+      },
+      "packet_presentable": false,
+      "decisions": [],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Obtain direct admissible verification for ENT-1801 (Cedar Quarry University Hospital); 1 attempts retained.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Obtain direct admissible verification for ENT-1802 (Willowmere Health Cooperative); 1 attempts retained.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Obtain direct admissible verification for ENT-1803 (Silverbeck Physicians Group); 1 attempts retained.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Provide a written explanation covering 2024-05-02 to 2024-06-01 (31 days).",
+          "owner": "Applicant",
+          "due": null
+        },
+        {
+          "item": "Record threshold eligibility disposition: nothing yet verified supports PRIV-IM. Do not discontinue automatically.",
+          "owner": "Clinical Director",
+          "due": null
+        },
+        {
+          "item": "Reference REF-1800 does not count: no reply; retain the unanswered request.",
+          "owner": "Medical Services Professional",
+          "due": "2026-05-05"
+        },
+        {
+          "item": "Send numbered reference request 2 for REF-1800, subject to signed release.",
+          "owner": "Medical Services Professional",
+          "due": "2026-03-23"
+        },
+        {
+          "item": "Reference REF-1801 does not count: no reply; retain the unanswered request.",
+          "owner": "Medical Services Professional",
+          "due": "2026-05-05"
+        },
+        {
+          "item": "Send numbered reference request 2 for REF-1801, subject to signed release.",
+          "owner": "Medical Services Professional",
+          "due": "2026-03-23"
+        },
+        {
+          "item": "Supply missing intake item: written explanation for 2024-05-02 to 2024-06-01.",
+          "owner": "Applicant",
+          "due": "2026-04-05"
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-019",
+      "revision": 1,
+      "status": "intake-incomplete",
+      "elements": {
+        "licensure": "outstanding",
+        "experience": "outstanding",
+        "gaps": "outstanding",
+        "education": "outstanding",
+        "certification": "eligibility-question",
+        "references": "outstanding"
+      },
+      "packet_presentable": false,
+      "decisions": [],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Do not send any verification request until the signed and dated release is on file.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Record threshold eligibility disposition: nothing yet verified supports PRIV-HOSP. Do not discontinue automatically.",
+          "owner": "Clinical Director",
+          "due": null
+        },
+        {
+          "item": "Supply missing intake item: signed and dated Authorization and Release.",
+          "owner": "Applicant",
+          "due": "2026-03-20"
+        },
+        {
+          "item": "Supply missing intake item: current curriculum vitae.",
+          "owner": "Applicant",
+          "due": "2026-03-20"
+        },
+        {
+          "item": "Supply missing intake item: two named peer referees.",
+          "owner": "Applicant",
+          "due": "2026-03-20"
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-020",
+      "revision": 1,
+      "status": "in-verification",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "education": "outstanding",
+        "certification": "eligibility-question",
+        "references": "resolved"
+      },
+      "packet_presentable": false,
+      "decisions": [],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Reply VR-2000 does not settle ENT-2000: source, usability window or changed entry requires review; retain the reply and obtain admissible evidence.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Obtain direct admissible verification for ENT-2000 (Steadmere University School of Medicine); 3 attempts retained.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "ENT-2000: 3 verification attempts retained; non-response is a red flag and remains outstanding.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Record threshold eligibility disposition: nothing yet verified supports PRIV-RAD. Do not discontinue automatically.",
+          "owner": "Clinical Director",
+          "due": null
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-021",
+      "revision": 1,
+      "status": "in-verification",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "outstanding",
+        "gaps": "resolved",
+        "education": "outstanding",
+        "certification": "eligibility-question",
+        "references": "outstanding"
+      },
+      "packet_presentable": false,
+      "decisions": [],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Obtain direct admissible verification for ENT-2100 (Cascade Valley College of Medicine); 3 attempts retained.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "ENT-2100: 3 verification attempts retained; non-response is a red flag and remains outstanding.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Obtain direct admissible verification for ENT-2103 (Greyfen Regional Hospital); 1 attempts retained.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Record threshold eligibility disposition: nothing yet verified supports PRIV-FM. Do not discontinue automatically.",
+          "owner": "Clinical Director",
+          "due": null
+        },
+        {
+          "item": "Reference REF-2101 does not count: no reply; retain the unanswered request.",
+          "owner": "Medical Services Professional",
+          "due": "2026-04-28"
+        },
+        {
+          "item": "Send numbered reference request 2 for REF-2101, subject to signed release.",
+          "owner": "Medical Services Professional",
+          "due": "2026-03-16"
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-022",
+      "revision": 1,
+      "status": "in-verification",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "outstanding",
+        "gaps": "resolved",
+        "education": "outstanding",
+        "certification": "eligibility-question",
+        "references": "outstanding"
+      },
+      "packet_presentable": false,
+      "decisions": [],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Reply VR-2201 does not settle ENT-2201: source, usability window or changed entry requires review; retain the reply and obtain admissible evidence.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Obtain direct admissible verification for ENT-2201 (Westmarch University Medical Center); 3 attempts retained.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "ENT-2201: 3 verification attempts retained; non-response is a red flag and remains outstanding.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Obtain direct admissible verification for ENT-2202 (Stonebridge Medical Associates); 1 attempts retained.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Record threshold eligibility disposition: nothing yet verified supports PRIV-PSY. Do not discontinue automatically.",
+          "owner": "Clinical Director",
+          "due": null
+        },
+        {
+          "item": "Reference REF-2201 does not count: no reply; retain the unanswered request.",
+          "owner": "Medical Services Professional",
+          "due": "2026-05-01"
+        },
+        {
+          "item": "Send numbered reference request 2 for REF-2201, subject to signed release.",
+          "owner": "Medical Services Professional",
+          "due": "2026-03-19"
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-023",
+      "revision": 1,
+      "status": "in-verification",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "education": "resolved",
+        "certification": "resolved",
+        "references": "outstanding"
+      },
+      "packet_presentable": false,
+      "decisions": [],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Reference REF-2301 does not count: no reply; retain the unanswered request.",
+          "owner": "Medical Services Professional",
+          "due": "2026-04-14"
+        },
+        {
+          "item": "Send numbered reference request 3 for REF-2301, subject to signed release.",
+          "owner": "Medical Services Professional",
+          "due": "2026-03-23"
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-024",
+      "revision": 1,
+      "status": "in-verification",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "education": "resolved",
+        "certification": "resolved",
+        "references": "outstanding"
+      },
+      "packet_presentable": false,
+      "decisions": [],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Reference REF-2401 does not count: no reply; retain the unanswered request.",
+          "owner": "Medical Services Professional",
+          "due": "2026-04-17"
+        },
+        {
+          "item": "Send numbered reference request 2 for REF-2401, subject to signed release.",
+          "owner": "Medical Services Professional",
+          "due": "2026-03-05"
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-025",
+      "revision": 2,
+      "status": "packet-presentable",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "education": "resolved",
+        "certification": "resolved",
+        "references": "resolved"
+      },
+      "packet_presentable": true,
+      "decisions": [],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Present the revision-bound packet to the Executive Committee for recommendation and the Governing Body for its decision; the Skill cannot decide either.",
+          "owner": "Executive Committee of the Medical Staff / Governing Body",
+          "due": null
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-026",
+      "revision": 1,
+      "status": "in-verification",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "outstanding",
+        "gaps": "resolved",
+        "education": "resolved",
+        "certification": "finding",
+        "references": "outstanding"
+      },
+      "packet_presentable": false,
+      "decisions": [],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Obtain direct admissible verification for ENT-2603 (Willowmere Health Cooperative); 1 attempts retained.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Present unsupported subset PRIV-CARD; supported groups are PRIV-IM, PRIV-HOSP.",
+          "owner": "Clinical Director",
+          "due": null
+        },
+        {
+          "item": "Reference REF-2601 does not count: no reply; retain the unanswered request.",
+          "owner": "Medical Services Professional",
+          "due": "2026-04-28"
+        },
+        {
+          "item": "Send numbered reference request 2 for REF-2601, subject to signed release.",
+          "owner": "Medical Services Professional",
+          "due": "2026-03-16"
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-027",
+      "revision": 1,
+      "status": "in-verification",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "outstanding",
+        "gaps": "resolved",
+        "education": "outstanding",
+        "certification": "eligibility-question",
+        "references": "outstanding"
+      },
+      "packet_presentable": false,
+      "decisions": [],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Obtain direct admissible verification for ENT-2702 (Drumlin Bay Medical Center); 1 attempts retained.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Obtain direct admissible verification for ENT-2704 (Orchard Row Specialty Clinic); 1 attempts retained.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Record threshold eligibility disposition: nothing yet verified supports PRIV-GS. Do not discontinue automatically.",
+          "owner": "Clinical Director",
+          "due": null
+        },
+        {
+          "item": "Reference REF-2701 does not count: no reply; retain the unanswered request.",
+          "owner": "Medical Services Professional",
+          "due": "2026-05-01"
+        },
+        {
+          "item": "Send numbered reference request 2 for REF-2701, subject to signed release.",
+          "owner": "Medical Services Professional",
+          "due": "2026-03-19"
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-028",
+      "revision": 1,
+      "status": "packet-presentable",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "education": "resolved",
+        "certification": "resolved",
+        "references": "resolved"
+      },
+      "packet_presentable": true,
+      "decisions": [],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Present the revision-bound packet to the Executive Committee for recommendation and the Governing Body for its decision; the Skill cannot decide either.",
+          "owner": "Executive Committee of the Medical Staff / Governing Body",
+          "due": null
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-029",
+      "revision": 1,
+      "status": "in-verification",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "education": "resolved",
+        "certification": "eligibility-question",
+        "references": "resolved"
+      },
+      "packet_presentable": false,
+      "decisions": [],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Record threshold eligibility disposition: nothing yet verified supports PRIV-ORTHO. Do not discontinue automatically.",
+          "owner": "Clinical Director",
+          "due": null
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-030",
+      "revision": 1,
+      "status": "in-verification",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "discrepancy",
+        "gaps": "resolved",
+        "education": "resolved",
+        "certification": "resolved",
+        "references": "resolved"
+      },
+      "packet_presentable": false,
+      "decisions": [],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Resolve ENT-3002 in writing or amend: declared 2018-03-05 to 2022-08-31; VR-3002 reports 2018-03-05 to 2021-11-30.",
+          "owner": "Applicant",
+          "due": null
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-031",
+      "revision": 1,
+      "status": "in-verification",
+      "elements": {
+        "licensure": "outstanding",
+        "experience": "outstanding",
+        "gaps": "resolved",
+        "education": "resolved",
+        "certification": "resolved",
+        "references": "outstanding"
+      },
+      "packet_presentable": false,
+      "decisions": [],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Obtain direct admissible verification for ENT-3102 (Two Rivers Health Partners); 1 attempts retained.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Obtain a current active full unrestricted Washington licence; an NPI or out-of-state licence does not satisfy the bylaw.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Reference REF-3101 does not count: no reply; retain the unanswered request.",
+          "owner": "Medical Services Professional",
+          "due": "2026-04-28"
+        },
+        {
+          "item": "Send numbered reference request 2 for REF-3101, subject to signed release.",
+          "owner": "Medical Services Professional",
+          "due": "2026-03-16"
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-032",
+      "revision": 1,
+      "status": "in-verification",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "outstanding",
+        "gaps": "resolved",
+        "education": "outstanding",
+        "certification": "eligibility-question",
+        "references": "outstanding"
+      },
+      "packet_presentable": false,
+      "decisions": [],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Obtain direct admissible verification for ENT-3201 (Saltmarsh Regional Health); 1 attempts retained.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Obtain direct admissible verification for ENT-3202 (Bellamy Creek Medical Center); 1 attempts retained.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Obtain direct admissible verification for ENT-3203 (Willowmere Health Cooperative); 1 attempts retained.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Record disposition on high-risk findings; provide disclosures and source evidence, then present to Executive Committee and Governing Body.",
+          "owner": "Clinical Director",
+          "due": null
+        },
+        {
+          "item": "Record threshold eligibility disposition: nothing yet verified supports PRIV-OBG. Do not discontinue automatically.",
+          "owner": "Clinical Director",
+          "due": null
+        },
+        {
+          "item": "Reference REF-3200 does not count: no reply; retain the unanswered request.",
+          "owner": "Medical Services Professional",
+          "due": "2026-05-05"
+        },
+        {
+          "item": "Send numbered reference request 2 for REF-3200, subject to signed release.",
+          "owner": "Medical Services Professional",
+          "due": "2026-03-23"
+        },
+        {
+          "item": "Reference REF-3201 does not count: no reply; retain the unanswered request.",
+          "owner": "Medical Services Professional",
+          "due": "2026-05-05"
+        },
+        {
+          "item": "Send numbered reference request 2 for REF-3201, subject to signed release.",
+          "owner": "Medical Services Professional",
+          "due": "2026-03-23"
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-033",
+      "revision": 1,
+      "status": "in-verification",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "outstanding",
+        "gaps": "resolved",
+        "education": "resolved",
+        "certification": "resolved",
+        "references": "outstanding"
+      },
+      "packet_presentable": false,
+      "decisions": [],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Obtain direct admissible verification for ENT-3303 (Willowmere Health Cooperative); 2 attempts retained.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Reference REF-3301 does not count: no reply; retain the unanswered request.",
+          "owner": "Medical Services Professional",
+          "due": "2026-05-01"
+        },
+        {
+          "item": "Send numbered reference request 2 for REF-3301, subject to signed release.",
+          "owner": "Medical Services Professional",
+          "due": "2026-03-19"
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-034",
+      "revision": 1,
+      "status": "packet-presentable",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "education": "resolved",
+        "certification": "resolved",
+        "references": "resolved"
+      },
+      "packet_presentable": true,
+      "decisions": [],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Present the revision-bound packet to the Executive Committee for recommendation and the Governing Body for its decision; the Skill cannot decide either.",
+          "owner": "Executive Committee of the Medical Staff / Governing Body",
+          "due": null
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-035",
+      "revision": 1,
+      "status": "packet-presentable",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "education": "resolved",
+        "certification": "resolved",
+        "references": "resolved"
+      },
+      "packet_presentable": true,
+      "decisions": [],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Present the revision-bound packet to the Executive Committee for recommendation and the Governing Body for its decision; the Skill cannot decide either.",
+          "owner": "Executive Committee of the Medical Staff / Governing Body",
+          "due": null
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-036",
+      "revision": 1,
+      "status": "packet-presentable",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "education": "resolved",
+        "certification": "resolved",
+        "references": "resolved"
+      },
+      "packet_presentable": true,
+      "decisions": [
+        {
+          "decision_id": "MEC-2026-034",
+          "admitted": true,
+          "reason": null
+        }
+      ],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Present the revision-bound packet to the Executive Committee for recommendation and the Governing Body for its decision; the Skill cannot decide either.",
+          "owner": "Executive Committee of the Medical Staff / Governing Body",
+          "due": null
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-037",
+      "revision": 1,
+      "status": "packet-presentable",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "education": "resolved",
+        "certification": "resolved",
+        "references": "resolved"
+      },
+      "packet_presentable": true,
+      "decisions": [],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Present the revision-bound packet to the Executive Committee for recommendation and the Governing Body for its decision; the Skill cannot decide either.",
+          "owner": "Executive Committee of the Medical Staff / Governing Body",
+          "due": null
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-038",
+      "revision": 1,
+      "status": "packet-presentable",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "education": "resolved",
+        "certification": "resolved",
+        "references": "resolved"
+      },
+      "packet_presentable": true,
+      "decisions": [],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Present the revision-bound packet to the Executive Committee for recommendation and the Governing Body for its decision; the Skill cannot decide either.",
+          "owner": "Executive Committee of the Medical Staff / Governing Body",
+          "due": null
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-039",
+      "revision": 1,
+      "status": "packet-presentable",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "education": "resolved",
+        "certification": "resolved",
+        "references": "resolved"
+      },
+      "packet_presentable": true,
+      "decisions": [],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Present the revision-bound packet to the Executive Committee for recommendation and the Governing Body for its decision; the Skill cannot decide either.",
+          "owner": "Executive Committee of the Medical Staff / Governing Body",
+          "due": null
+        }
+      ]
+    },
+    {
+      "application_id": "APP-2026-040",
+      "revision": 1,
+      "status": "packet-presentable",
+      "elements": {
+        "licensure": "resolved",
+        "experience": "resolved",
+        "gaps": "resolved",
+        "education": "resolved",
+        "certification": "resolved",
+        "references": "resolved"
+      },
+      "packet_presentable": true,
+      "decisions": [],
+      "approval_decision_id": null,
+      "activation": null,
+      "monitored_conditions": [],
+      "action_queue": [
+        {
+          "item": "Confirm application signature/date and referee working addresses in the original office file; these fields are not assessable from the export.",
+          "owner": "Medical Services Professional",
+          "due": null
+        },
+        {
+          "item": "Present the revision-bound packet to the Executive Committee for recommendation and the Governing Body for its decision; the Skill cannot decide either.",
+          "owner": "Executive Committee of the Medical Staff / Governing Body",
+          "due": null
+        }
+      ]
+    }
+  ]
+}

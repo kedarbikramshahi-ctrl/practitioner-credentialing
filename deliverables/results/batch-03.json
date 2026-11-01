@@ -1,0 +1,14 @@
+{
+  "run_at": "2026-11-01T05:11:12.588Z",
+  "batch": 3,
+  "status": "supported",
+  "errors": [],
+  "snapshot": "deliverables/snapshots/batch-03.json",
+  "submission_note": "Business holds and outstanding work remain in application action queues.",
+  "superseded": [
+    "deliverables/superseded/6361a097-36e2-457e-b4dc-3c355de3f3c9/snapshots-batch-03.json",
+    "deliverables/superseded/6361a097-36e2-457e-b4dc-3c355de3f3c9/state-batch-03.json",
+    "deliverables/superseded/6361a097-36e2-457e-b4dc-3c355de3f3c9/audit-batch-03.json",
+    "deliverables/superseded/6361a097-36e2-457e-b4dc-3c355de3f3c9/results-batch-03.json"
+  ]
+}

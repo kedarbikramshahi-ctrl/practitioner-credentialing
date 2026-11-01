@@ -1,0 +1,9 @@
+Perform a final read-only review against every assignment requirement. Report any missing deliverables or correctness issues, the full final commit SHA, both checkpoint IDs, and exact submission instructions. Do not modify files or push.
+
+---
+
+Fix all five reproduced correctness issues and the output transaction-consistency issue from your review. Add meaningful regression tests. Use the office documents to resolve policy questions; do not invent rules.
+
+Rerun all tests and verification. If any sealed snapshot changes, preserve its original bytes and regenerate affected successors according to the assignment.
+
+Update the verification report and run log, commit the fixes locally, and verify the new Entire checkpoint. Preserve the original interview and schema unchanged. Stop on any actual capture failure. Do not push without my approval.
